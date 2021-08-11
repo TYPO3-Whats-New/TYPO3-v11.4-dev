@@ -1,0 +1,36 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94692 | Registering Icons via Service Container
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Custom Icon Registration}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+	\item Extension developers can now register custom icons through a Service Container
+	\item The new approach improves the performance of requests
+	\item Store the configuration in file \texttt{Configuration/Icons.php}:
+\begin{lstlisting}
+<?php
+return [
+  'myicon' => [
+    'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    'source' => 'EXT:my_extension/Resources/Public/Icons/myicon.svg'
+  ]
+];
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
