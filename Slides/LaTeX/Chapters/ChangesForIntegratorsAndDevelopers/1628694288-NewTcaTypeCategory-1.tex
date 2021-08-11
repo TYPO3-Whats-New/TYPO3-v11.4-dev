@@ -6,21 +6,21 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% Feature | 94622 | New TCA type category
+% Feature | 94622 | New TCA type "category"
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{New TCA Type: \texttt{category}}
+	\framesubtitle{New TCA Type: \texttt{category} (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-	\item A new TCA field type "\texttt{category}" has been added to TYPO3 Core
-	\item This supersedes the \texttt{CategoryRegistry} and the method\newline
-		\texttt{ExtensionManagementUtility->makeCategorizable()}\newline
-		\smaller(which we will mark as deprecated in the future)\normalsize
-	\item For example:
+		\item A new TCA field type "\texttt{category}" has been added to TYPO3 Core
+		\item This supersedes the \texttt{CategoryRegistry} and the method\newline
+			\texttt{ExtensionManagementUtility->makeCategorizable()}\newline
+			\smaller(which we will mark as deprecated in the future)\normalsize
+		\item For example:
 \begin{lstlisting}
 $GLOBALS['TCA'][$myTable]['columns']['categories'] = [
   'config' => [
