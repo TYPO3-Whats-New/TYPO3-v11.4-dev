@@ -16,11 +16,13 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item A new TCA field type "\texttt{category}" has been added to TYPO3 Core
+		\item A new TCA field type "\texttt{category}" has been added to the TYPO3 Core
 		\item This supersedes the \texttt{CategoryRegistry} and the method\newline
 			\texttt{ExtensionManagementUtility->makeCategorizable()}\newline
-			\smaller(which we will mark as deprecated in the future)\normalsize
-		\item For example:
+			\small(which we will mark as deprecated in the future)\normalsize
+		\item TYPO3 automatically generates the TCA configuration and also adds
+			the database field
+		\item Usage example:
 \begin{lstlisting}
 $GLOBALS['TCA'][$myTable]['columns']['categories'] = [
   'config' => [
