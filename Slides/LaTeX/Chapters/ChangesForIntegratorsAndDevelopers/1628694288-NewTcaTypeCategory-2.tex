@@ -15,6 +15,28 @@
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
+	\begin{itemize}
+		\item Developers can define a relation, for example:
+\begin{lstlisting}
+$GLOBALS['TCA'][$myTable]['columns']['mainCategory'] = [
+  'config' => [
+    'type' => 'category',
+    'relationship' => 'oneToOne'
+  ]
+];
+\end{lstlisting}
+
+		\item Possible values are:
+			\begin{itemize}
+				\item \texttt{manyToMany} (default)
+				\item \texttt{oneToMany}
+				\item \texttt{oneToOne}
+			\end{itemize}
+
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94622-NewTCATypeCategory.html}{changelog} for further details
+
+	\end{itemize}
+
 \end{frame}
 
 % ------------------------------------------------------------------------------
