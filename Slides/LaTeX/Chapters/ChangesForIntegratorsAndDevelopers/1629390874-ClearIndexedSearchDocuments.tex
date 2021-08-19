@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94577 | Clear indexed_search documents when content is changed
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Indexed Search}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The system extension \texttt{EXT:indexed\_search} now features
+			a new configuration option:\newline
+			\small"\texttt{basic.deleteFromIndexAfterEditing}"\normalsize
+		\item If enabled (which is the default) and a page or its content is
+			edited, the page and its content is removed from the search index
+		\item If this option is disabled, backend users have to manually clear
+			the index as required
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
