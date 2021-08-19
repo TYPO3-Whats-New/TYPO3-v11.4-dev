@@ -1,0 +1,37 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Important | 92202 | Remove exclude from important fields
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Important Fields}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The following two fields are now always enabled/shown in the TCA:
+			\begin{itemize}
+				\item \texttt{tt\_content.colPos}
+				\item \texttt{pages.slug}
+			\end{itemize}
+		\item This prevents integrators from accidentally misconfigure the
+			access permissions
+		\item The following TSconfig overwrites the default settings and hides
+			these fields if required:
+\begin{lstlisting}
+TCEFORM.pages.slug.disabled = 1
+TCEFORM.tt_content.colPos.disabled = 1
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
