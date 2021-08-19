@@ -16,8 +16,9 @@
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Developers can register user-defined
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SoftReferences/Index.html#soft-references}{soft reference parsers}
+		\item Developers can now register user-defined
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SoftReferences/Index.html#soft-references}{soft reference}
+			parsers
 
 		\item For example (in file \texttt{Configuration/Services.yaml}):
 \begin{lstlisting}
@@ -27,13 +28,10 @@ Vendor\MyExtension\SoftReference\MySoftReferenceParser:
       parserKey: your_key
 \end{lstlisting}
 
-		\item Parsers have to implement the new interface\newline
-			\smaller\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Core\textbackslash
-				DataHandling\textbackslash
-				SoftReference\textbackslash
-				SoftReferenceParserInterface}\normalsize
+		\item Parsers have to implement the following new interface:\newline
+\begin{lstlisting}
+TYPO3\CMS\Core\DataHandling\SoftReference\SoftReferenceParserInterface
+\end{lstlisting}
 
 	\end{itemize}
 
