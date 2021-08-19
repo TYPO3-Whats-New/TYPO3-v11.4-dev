@@ -17,21 +17,20 @@
 
 	\begin{itemize}
 		\item The Fluid ViewHelpers \texttt{f:uri.external} and \texttt {f:link.external}
-			now use https as the default scheme
+			now use \textbf{https} as the default scheme
 		\item For example:
 \begin{lstlisting}
 <f:link.external uri="example.com">
   external link
 </f:link.external>
 \end{lstlisting}
-
-		\item This generates the link:
+			This generates the link:
 \begin{lstlisting}
 <a href="https://example.com">external link</a>
 \end{lstlisting}
 
 		\item To overwrite the default value, developers can explicitly set the
-			scheme as follows:
+			scheme as follows (e.g. "http"):
 \begin{lstlisting}
 <f:link.external uri="example.com" defaultScheme="http">
   external link
