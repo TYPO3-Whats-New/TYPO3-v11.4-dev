@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Important | 94615 | Fluid view helpers f:linkexternal and f:uriexternal use https by default
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Database Identifier Quotation}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item The Fluid ViewHelpers \texttt{f:uri.external} and \texttt {f:link.external}
+			now use https as the default scheme
+		\item For example:
+\begin{lstlisting}
+<f:link.external uri="example.com">external link</f:link.external>
+\end{lstlisting}
+
+		\item To overwrite the default value, developers can explicitly set the
+			scheme as follows:
+\begin{lstlisting}
+<f:link.external uri="example.com" defaultScheme="http">external link</f:link.external>
+\end{lstlisting}
+
+\begin{lstlisting}
+<f:uri.external uri="example.com" defaultScheme="http" />
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
