@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Important | 94697 | Quote database identifiers when used instead of globally upfront
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Database Identifier Quotation}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item TCA keys that contain SQL fragments use a new quoting mechanism
+			when the TYPO3 Core builds the database queries\newline
+			\small(fields such as \texttt{foreign\_table\_where}, \texttt{MM\_table\_where}, etc)\normalsize
+		\item This is important to ensure DBAL compatibility and makes a
+			database connection unnecessary during TCA cache warmup
+		\item A feature flag "\texttt{runtimeDbQuotingOfTcaConfiguration}" lets
+		 	integrators/developers to force the old behaviour if required
+		\item This flag will be removed in TYPO3 v12.0
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
