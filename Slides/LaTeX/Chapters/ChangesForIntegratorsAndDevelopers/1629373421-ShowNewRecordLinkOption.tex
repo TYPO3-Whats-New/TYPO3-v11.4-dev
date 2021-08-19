@@ -13,14 +13,13 @@
 	\framesubtitle{New Option: \texttt{showNewRecordLink}}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
 		\item Developers can now disable the "New record" link of TCA inline
 			elements independently from the "+" button and all other "level links"
-		\item A new option \texttt{showNewRecordLink} has been introduced for
-			this (default value: \texttt{true})
-		\item For example:
+		\item A new option \texttt{showNewRecordLink} has been introduced for this
+		\item For example (to disable the "New record" button):
 \begin{lstlisting}
 'inlineField' => [
   'label' => 'Inline without New record link',
