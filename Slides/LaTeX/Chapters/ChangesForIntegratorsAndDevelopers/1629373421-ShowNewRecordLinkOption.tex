@@ -1,0 +1,45 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94765 | Introduce showNewRecordLink option
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{New Option: \texttt{showNewRecordLink}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item Developers can now disable the "New record" link of TCA inline
+			elements independently from the "+" button and all other "level links"
+		\item A new option \texttt{showNewRecordLink} has been introduced for
+			this (default value: \texttt{true})
+		\item For example:
+\begin{lstlisting}
+'inlineField' => [
+  'label' => 'Inline without New record link',
+  'config' => [
+    'type' => 'inline',
+    'appearance' => [
+      'showNewRecordLink' => false
+    ]
+  ]
+]
+\end{lstlisting}
+
+		\item Since TYPO3 v11.4, the following option only manages the display of the "+" button:
+\begin{lstlisting}
+\texttt{['appearance']['enabledControls']['new']}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
