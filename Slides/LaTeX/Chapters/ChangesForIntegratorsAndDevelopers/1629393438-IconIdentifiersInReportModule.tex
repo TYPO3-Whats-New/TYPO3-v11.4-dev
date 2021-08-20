@@ -21,10 +21,14 @@
 		\item For example:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['reports']['tx_reports']['status'] = [
-  'title' => 'LLL:EXT:reports/Resources/Private/Language/locallang_reports.xlf:status_report_title',
-  'icon' => 'module-reports', // icon identifiers are now possible
-  'description' => 'LLL:EXT:reports/Resources/Private/Language/locallang_reports.xlf:status_report_description',
-  'report' => \TYPO3\CMS\Reports\Report\Status\Status::class
+  'title' =>
+    'LLL:EXT:reports/Resources/Private/Language/locallang_reports.xlf:status_report_title',
+  'icon' =>
+    'module-reports', // icon identifiers are now possible
+  'description' =>
+    'LLL:EXT:reports/Resources/Private/Language/locallang_reports.xlf:status_report_description',
+  'report' =>
+    \TYPO3\CMS\Reports\Report\Status\Status::class
 ];
 \end{lstlisting}
 
