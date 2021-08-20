@@ -10,10 +10,10 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{TCA Configuration: \texttt{fileFolder}}
+	\framesubtitle{TCA Configuration: \texttt{fileFolder} (1)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
 		\item The TCA configuration "\texttt{fileFolder}" has been streamlined
@@ -21,9 +21,9 @@
 	\end{itemize}
 
 	\begin{columns}[T]
-		\begin{column}{.1\textwidth}
+		\begin{column}{.05\textwidth}
 		\end{column}
-		\begin{column}{.45\textwidth}
+		\begin{column}{.475\textwidth}
 \begin{lstlisting}
 // Before
 'fieldname' => [
@@ -37,7 +37,7 @@
 ]
 \end{lstlisting}
 		\end{column}
-		\begin{column}{.45\textwidth}
+		\begin{column}{.475\textwidth}
 \begin{lstlisting}
 // After
 'fieldname' => [
@@ -54,6 +54,10 @@
 \end{lstlisting}
 		\end{column}
 	\end{columns}
+
+	\begin{itemize}
+		\item Note the new option names, e.g. "\texttt{depth}"
+	\end{itemize}
 
 \end{frame}
 
