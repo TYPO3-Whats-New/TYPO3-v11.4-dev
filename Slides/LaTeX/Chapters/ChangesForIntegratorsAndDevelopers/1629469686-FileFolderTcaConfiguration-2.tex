@@ -1,0 +1,64 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94406 | Override fileFolder TCA configuration with TSconfig
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{TCA Configuration: \texttt{fileFolder} (1)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The TCA configuration "\texttt{fileFolder}" has been streamlined
+		\item Options are now available as "\texttt{fileFolderConfig}":
+	\end{itemize}
+
+	\begin{columns}[T]
+		\begin{column}{.05\textwidth}
+		\end{column}
+		\begin{column}{.475\textwidth}
+\begin{lstlisting}
+// Before
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolder' => 'EXT:myext/Resources/Public/Icons',
+    'fileFolder_extList' => 'svg',
+    'fileFolder_recursions' => 1,
+  ]
+]
+\end{lstlisting}
+		\end{column}
+		\begin{column}{.475\textwidth}
+\begin{lstlisting}
+// After
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolderConfig' => [
+      'folder' => 'EXT:myext/Resources/Public/Icons',
+      'allowedExtensions' => 'svg',
+      'depth' => 1,
+    ]
+  ]
+]
+\end{lstlisting}
+		\end{column}
+	\end{columns}
+
+	\begin{itemize}
+		\item Note the new option names, e.g. "\texttt{depth}"
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
