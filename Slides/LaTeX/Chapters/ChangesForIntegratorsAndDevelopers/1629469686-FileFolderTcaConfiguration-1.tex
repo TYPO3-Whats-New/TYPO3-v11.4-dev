@@ -21,31 +21,29 @@
 	\end{itemize}
 
 	\begin{columns}[T]
-		\begin{column}{.05\textwidth}
-		\end{column}
-		\begin{column}{.475\textwidth}
+		\begin{column}{.5\textwidth}
 \begin{lstlisting}
-// Before
+// TYPO3 < v11.4
 'fieldname' => [
   'config' => [
     'type' => 'select',
     'renderType' => 'selectSingle',
-    'fileFolder' => 'EXT:myextension/Resources/Public/Icons',
+    'fileFolder' => 'EXT:myext/Resources/Public/Icons',
     'fileFolder_extList' => 'svg',
     'fileFolder_recursions' => 1,
   ]
 ]
 \end{lstlisting}
 		\end{column}
-		\begin{column}{.475\textwidth}
+		\begin{column}{.5\textwidth}
 \begin{lstlisting}
-// After
+// TYPO3 >= v11.4
 'fieldname' => [
   'config' => [
     'type' => 'select',
     'renderType' => 'selectSingle',
     'fileFolderConfig' => [
-      'folder' => 'EXT:myextension/Resources/Public/Icons',
+      'folder' => 'EXT:myext/Resources/Public/Icons',
       'allowedExtensions' => 'svg',
       'depth' => 1,
     ]
@@ -56,7 +54,7 @@
 	\end{columns}
 
 	\begin{itemize}
-		\item Note the new option names, e.g. "\texttt{depth}"
+		\item Note the new option names, e.g. "\texttt{fileFolderConfig.depth}"
 	\end{itemize}
 
 \end{frame}
