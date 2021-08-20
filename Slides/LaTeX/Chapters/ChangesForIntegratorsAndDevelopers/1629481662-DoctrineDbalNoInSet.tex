@@ -13,7 +13,7 @@
 	\framesubtitle{CKEditor Plugin "Autolinking"}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
 		\item TYPO3's DBAL ExpressionBuilder now also supports the method \texttt{notInSet()}
@@ -27,10 +27,8 @@ $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
 $result = $queryBuilder
   ->select('*')
   ->from('fe_users')
-  ->where(
-    $queryBuilder->expr()->notInSet('usergroup', '5')
-  );
-->execute();
+  ->where($queryBuilder->expr()->notInSet('usergroup', '5'))
+  ->execute();
 \end{lstlisting}
 
 	\end{itemize}
