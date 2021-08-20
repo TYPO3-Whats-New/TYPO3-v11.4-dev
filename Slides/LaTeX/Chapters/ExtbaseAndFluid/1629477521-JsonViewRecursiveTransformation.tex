@@ -28,18 +28,6 @@
 		\end{column}
 		\begin{column}{.485\textwidth}
 			\begin{itemize}\small
-				\item 1:1 relations
-\begin{lstlisting}
-$configuration = [
-  'comment' => [
-    '_recursive' => ['comment']
-  ]
-];
-\end{lstlisting}
-			\end{itemize}\normalsize
-		\end{column}
-		\begin{column}{.485\textwidth}
-			\begin{itemize}\small
 				\item 1:n relations
 \begin{lstlisting}
 $configuration = [
@@ -47,6 +35,18 @@ $configuration = [
     '_descendAll' => [
       '_recursive' => ['directories']
     ]
+  ]
+];
+\end{lstlisting}
+			\end{itemize}\normalsize
+		\end{column}
+		\begin{column}{.485\textwidth}
+			\begin{itemize}\small
+				\item 1:1 relations
+\begin{lstlisting}
+$configuration = [
+  'comment' => [
+    '_recursive' => ['comment']
   ]
 ];
 \end{lstlisting}
