@@ -20,14 +20,15 @@
 			JsonView configuration to resolve recursive properties
 		\item This simplifies the implementation of, i.e. directories containing
 			directories or comments containing comments as replies, etc.
+		\item Examples:
 	\end{itemize}
-	\vspace{0.4cm}
+
 	\begin{columns}[T]
 		\begin{column}{.03\textwidth}
 		\end{column}
 		\begin{column}{.485\textwidth}
 			\begin{itemize}\small
-				\item Example 1: 1-to-1 relations
+				\item 1:1 relations
 \begin{lstlisting}
 $configuration = [
   'comment' => [
@@ -39,7 +40,7 @@ $configuration = [
 		\end{column}
 		\begin{column}{.485\textwidth}
 			\begin{itemize}\small
-				\item Example 2: 1-to-n relations
+				\item 1:n relations
 \begin{lstlisting}
 $configuration = [
   'directories' => [
