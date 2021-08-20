@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 84115 | Doctrine DBAL - notInSet() for expressions
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{CKEditor Plugin "Autolinking"}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item TYPO3's DBAL ExpressionBuilder now also supports the method \texttt{notInSet()}
+		\item This works with all officially supported DB engines such as SQLite,
+			MySQL/MariaDB, PostgreSQL, and MSSQL
+		\item The following example queries all frontend users who do not directly
+			belong to the usergroup ID 5:
+\begin{lstlisting}
+$queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+  ->getQueryBuilderForTable('fe_users');
+$result = $queryBuilder
+  ->select('*')
+  ->from('fe_users')
+  ->where(
+    $queryBuilder->expr()->notInSet('usergroup', '5')
+  );
+->execute();
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
