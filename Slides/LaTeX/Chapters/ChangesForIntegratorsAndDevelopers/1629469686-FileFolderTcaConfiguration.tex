@@ -21,14 +21,36 @@
 	\end{itemize}
 
 	\begin{columns}[T]
-		\begin{column}{.5\textwidth}
+		\begin{column}{.1\textwidth}
+		\end{column}
+		\begin{column}{.45\textwidth}
 \begin{lstlisting}
-left
+// Before
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolder' => 'EXT:myextension/Resources/Public/Icons',
+    'fileFolder_extList' => 'svg',
+    'fileFolder_recursions' => 1,
+  ]
+]
 \end{lstlisting}
 		\end{column}
-		\begin{column}{.5\textwidth}
+		\begin{column}{.45\textwidth}
 \begin{lstlisting}
-right
+// After
+'fieldname' => [
+  'config' => [
+    'type' => 'select',
+    'renderType' => 'selectSingle',
+    'fileFolderConfig' => [
+      'folder' => 'EXT:myextension/Resources/Public/Icons',
+      'allowedExtensions' => 'svg',
+      'depth' => 1,
+    ]
+  ]
+]
 \end{lstlisting}
 		\end{column}
 	\end{columns}
