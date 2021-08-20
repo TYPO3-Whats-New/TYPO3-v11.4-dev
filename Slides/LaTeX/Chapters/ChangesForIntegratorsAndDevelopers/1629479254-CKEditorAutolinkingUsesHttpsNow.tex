@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 90336 | CKEditor Autolinking uses https by default
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{CKEditor Plugin "Autolinking"}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item URLs such as \texttt{example.com} typed in the RTE are automatically
+			converted into an external link
+		\item This is done by CKEditor's plugin
+			"\href{https://ckeditor.com/docs/ckeditor5/latest/features/link.html#autolink-feature}{AutoLink}"
+		\item Since TYPO3 v11.4, the default schema has been switched from
+			"http" to "https"
+		\item Editors can, of course, manually update the schema to http if required
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
