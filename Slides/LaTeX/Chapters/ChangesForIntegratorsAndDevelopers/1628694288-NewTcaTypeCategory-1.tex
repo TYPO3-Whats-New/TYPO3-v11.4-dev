@@ -13,7 +13,7 @@
 	\framesubtitle{New TCA Type: \texttt{category} (1)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
 		\item A new TCA field type "\texttt{category}" has been added to the TYPO3 Core
@@ -32,7 +32,7 @@ $GLOBALS['TCA'][$myTable]['columns']['categories'] = [
   ]
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes($myTable, 'categories');
+ExtensionManagementUtility::addToAllTCAtypes($myTable, 'categories');
 \end{lstlisting}
 
 	\end{itemize}

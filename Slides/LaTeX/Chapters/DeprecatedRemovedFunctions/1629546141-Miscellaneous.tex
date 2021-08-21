@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Breaking | 70528 | Deprecated form mixins removed
+% Deprecation | 85613 | Category Registry
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -18,6 +19,9 @@
 	\begin{itemize}
 		\item The following Form Framework setup mixins have been removed:\newline
 			\small\texttt{TYPO3.CMS.Form.mixins.*}\normalsize
+		\item The \texttt{CategoryRegistry} and the \texttt{ExtensionManagementUtility::makeCategorizable()}
+			method have been marked \textbf{deprecated}\newline
+			\small(use the new TCA type \texttt{category} instead)\normalsize
 
 	\end{itemize}
 
