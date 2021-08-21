@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94619 | Extbase ObjectManager
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Extbase ObjectManager}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item The TYPO3 v11 Core does not use the Extbase ObjectManager anymore
+		\item All related components have been marked as \textbf{deprecated}
+		\item For example, calling \texttt{ObjectManager->get()} now writes
+			a deprecation warning to the log
+		\item Developers are encouraged to use Symfony's
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/DependencyInjection/Index.html}{DependencyInjection}
+			component since TYPO3 v10
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.4/Deprecation-90803-DeprecationOfObjectManagergetInExtbaseContext.html#changelog-deprecation-90803-objectmanagerget}{changelog}
+			for migration options
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
