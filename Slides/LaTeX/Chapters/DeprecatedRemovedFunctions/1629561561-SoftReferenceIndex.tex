@@ -16,7 +16,7 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The following class has been marked as \texttt{deprecated}:
+		\item The following class has been marked as \textbf{deprecated}:
 			\begin{itemize}\smaller
 				\item \texttt{TYPO3\textbackslash
 					CMS\textbackslash
@@ -36,6 +36,16 @@
 					Backend\textbackslash
 					Utility\textbackslash
 					BackendUtility:explodeSoftRefParserList}
+			\end{itemize}\normalsize
+		\item Custom SoftReference parsers must implement the following interface\newline
+			\smaller(otherwise a deprecation error will be logged and an exception will be thrown in TYPO3 v12)\normalsize
+				\begin{itemize}\smaller
+					\item \texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Core\textbackslash
+						DataHandling\textbackslash
+						SoftReference\textbackslash
+						SoftReferenceParserInterface}
 			\end{itemize}\normalsize
 	\end{itemize}
 
