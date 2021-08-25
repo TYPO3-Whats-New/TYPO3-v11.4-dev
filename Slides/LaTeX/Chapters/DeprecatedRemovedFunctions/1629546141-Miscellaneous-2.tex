@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 94958 | ContentObjectRenderer properties
+% Deprecation | 94957 | TypoScriptFrontendController->cObjectDepthCounter
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -16,19 +17,30 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The following unused properties have been marked as \textbf{deprecated}:\newline
-			\small\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Frontend\textbackslash
-				ContentObject}\normalsize
+		\item The following unused properties have been marked as \textbf{deprecated}:
 			\vspace{0.1cm}
 			\begin{itemize}\small
-				\item \texttt{ContentObject->align}
-				\item \texttt{ContentObject->oldData}
-				\item \texttt{ContentObject->alternativeData}
-				\item \texttt{ContentObject->currentRecordTotal}
-				\item \texttt{ContentObject->recordRegister}
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Frontend\textbackslash
+					ContentObject}
+					\begin{itemize}
+						\item \texttt{ContentObject->align}
+						\item \texttt{ContentObject->oldData}
+						\item \texttt{ContentObject->alternativeData}
+						\item \texttt{ContentObject->currentRecordTotal}
+						\item \texttt{ContentObject->recordRegister}
+					\end{itemize}
+
+				\item \texttt{TYPO3\textbackslash
+					CMS\textbackslash
+					Frontend\textbackslash
+					Controller}
+					\begin{itemize}
+						\item \texttt{TypoScriptFrontendController->cObjectDepthCounter}
+					\end{itemize}
 			\end{itemize}\normalsize
+
 	\end{itemize}
 
 \end{frame}
