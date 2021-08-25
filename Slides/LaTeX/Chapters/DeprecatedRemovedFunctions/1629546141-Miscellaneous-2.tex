@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Deprecation | 94958 | ContentObjectRenderer properties
 % Deprecation | 94957 | TypoScriptFrontendController->cObjectDepthCounter
+% Deprecation | 94956 | Public cObj
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -39,7 +40,9 @@
 						\item \texttt{TypoScriptFrontendController->cObjectDepthCounter}
 					\end{itemize}
 			\end{itemize}\normalsize
-
+		\item Declaring the property \texttt{\$cObj} with a public visibility in
+			a class called by \texttt{ContentObjectRenderer->callUserFunction()}
+			triggers a deprecation error
 	\end{itemize}
 
 \end{frame}
