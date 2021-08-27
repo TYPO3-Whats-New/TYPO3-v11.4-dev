@@ -16,14 +16,15 @@
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item When TYPO3 warms up caches, the code of the following files are now
- 			scoped into the global namespace:\newline
-			\small\texttt{ext\_localconf.php} \texttt{ext\_tables.php}\normalsize
+		\item When TYPO3 warms up caches, the code of
+			\small\texttt{ext\_localconf.php}\normalsize
+			and
+			\small\texttt{ext\_table.php}\normalsize
+			are now scoped into the global namespace
 		\item This means that extension developers \textbf{must not} wrap the
 			content of these files in a local namespace
-		\item This change lets extension authors import classes by the \texttt{use}
-			statement
-		\item For example:
+		\item Extension authors can now import classes by the
+			\texttt{use}-statement:
 \begin{lstlisting}
 <?php
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
