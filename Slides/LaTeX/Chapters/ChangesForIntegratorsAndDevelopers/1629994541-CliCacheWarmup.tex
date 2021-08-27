@@ -18,9 +18,9 @@
 	\begin{itemize}
 		\item TYPO3's command line interface (CLI) supports a new command:
 \begin{lstlisting}
-./bin/typo3 cache:warmup [<group>]
+./bin/typo3 cache:warmup [--group <all|system|di|pages|…>]
 \end{lstlisting}
-		\item The following caches are warmed up by the TYPO3 Core:
+		\item Specific cache groups can be defined via the group option.
 			\begin{itemize}\smaller
 				\item DI
 				\item ext\_localconf
@@ -36,7 +36,8 @@
 				\item dashboard: DashboardPresets
 				\item dashboard: WidgetGroups
 			\end{itemize}\normalsize
-
+		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/}{changelog}
+			for further details
 	\end{itemize}
 
 \end{frame}
