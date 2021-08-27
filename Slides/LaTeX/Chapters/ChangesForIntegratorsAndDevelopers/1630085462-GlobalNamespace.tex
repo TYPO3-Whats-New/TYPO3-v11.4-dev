@@ -1,0 +1,43 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Important | 94280 | Move contents of ext_*php into global namespace
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Global Namespace}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item When TYPO3 warms up caches, the code of the following files are now
+ 			scoped into the global namespace:\newline
+			\small\texttt{ext\_localconf.php} \texttt{ext\_tables.php}\normalsize
+		\item This means that extension developers \textbf{must not} wrap the
+			content of these files in a local namespace
+		\item This change lets extension authors import classes by the \texttt{use}
+			statement
+		\item For example:
+\begin{lstlisting}
+<?php
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+ExtensionManagementUtility::addUserTSConfig('
+  options.saveDocView = 1
+  options.saveDocNew = 1
+  options.saveDocNew.pages = 0
+  options.saveDocNew.sys_file = 0
+  options.saveDocNew.sys_file_metadata = 0
+  options.disableDelete.sys_file = 1
+');
+\end{lstlisting}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
