@@ -21,6 +21,13 @@
 ./bin/typo3 cache:warmup [--group <all|system|di|pages|...>]
 \end{lstlisting}
 		\item Specific cache groups can be defined via the group option.
+	\end{itemize}
+
+	\begin{columns}[T]
+		\begin{column}{.04\textwidth}
+		\end{column}
+		\begin{column}{.48\textwidth}
+			\smaller TYPO3 < v11.4 \normalsize
 			\begin{itemize}\smaller
 				\item DI
 				\item ext\_localconf
@@ -29,6 +36,11 @@
 				\item middleware stack
 				\item PackageManager
 				\item sites-configuration
+			\end{itemize}\normalsize
+		\end{column}
+		\begin{column}{.48\textwidth}
+			\smaller TYPO3 >= v11.4 \normalsize
+			\begin{itemize}\smaller
 				\item expressionLanguageProviders
 				\item BackendRoutes
 				\item l10n (parses all xlf files and creates cache for all languages)
@@ -36,6 +48,10 @@
 				\item dashboard: DashboardPresets
 				\item dashboard: WidgetGroups
 			\end{itemize}\normalsize
+		\end{column}
+	\end{columns}
+
+	\begin{itemize}
 		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/}{changelog}
 			for further details
 	\end{itemize}
