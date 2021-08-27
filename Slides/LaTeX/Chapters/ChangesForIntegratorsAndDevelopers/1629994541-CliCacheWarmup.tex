@@ -1,0 +1,44 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93436 | Introduce cache:warmup command
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{TYPO3 CLI (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item TYPO3's command line interface (CLI) supports a new command:
+\begin{lstlisting}
+./bin/typo3 cache:warmup [<group>]
+\end{lstlisting}
+		\item The following caches are warmed up by the TYPO3 Core:
+			\begin{itemize}\smaller
+				\item DI
+				\item ext_localconf
+				\item TCA
+				\item ext_tables
+				\item middleware stack
+				\item PackageManager
+				\item sites-configuration
+				\item expressionLanguageProviders
+				\item BackendRoutes
+				\item l10n (parses all xlf files, and creates cache for all languages)
+				\item assets: BackendIcons
+				\item dashboard: DashboardPresets
+				\item dashboard: WidgetGroups
+			\end{itemize}\normalsize
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
