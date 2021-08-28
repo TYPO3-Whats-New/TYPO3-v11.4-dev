@@ -6,9 +6,7 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% Breaking | 70528 | Deprecated form mixins removed
-% Deprecation | 85613 | Category Registry
-% Deprecation | 94684 | GeneralUtility::shortMD5()
+% Deprecation | 94762 | Deprecate JavaScript topfsMod state
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -18,14 +16,8 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The following Form Framework setup mixins have been removed:\newline
-			\small\texttt{TYPO3.CMS.Form.mixins.*}\normalsize
-		\item The "\texttt{CategoryRegistry}" and the following method have been
-			marked as \textbf{deprecated}:\newline
-			\texttt{ExtensionManagementUtility::makeCategorizable()}\newline
-			\small(use the new TCA type \texttt{category} instead)\normalsize
-		\item The following method has been marked as \textbf{deprecated}:\newline
-			\texttt{GeneralUtility::shortMD5()}\normalsize
+		\item The JavaScript object \texttt{top.fsMod} (used in the page/file tree
+			in the TYPO3 backend) has been marked as \textbf{deprecated}
 	\end{itemize}
 
 \end{frame}
