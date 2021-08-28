@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94662 | Add placeholder for site configuration in foreign_table_where
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{TCA: \texttt{foreign\_table\_where}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item The \texttt{foreign\_table\_where} setting in the TCA now also
+			supports the following markers:
+
+			\begin{itemize}
+				\item \texttt{###SITE:<KEY>###}\newline
+					\small(e.g. \texttt{###SITE:rootPageId###})
+				\item \texttt{###SITE:<KEY>.<SUBKEY>###}\newline
+					\small(e.g. \texttt{###SITE:mySetting.categoryPid###})
+			\end{itemize}
+
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
