@@ -16,11 +16,9 @@
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item Since TYPO3 extensions are Composer packages, they should be
-			installed using Composer
-		\item Composer-based TYPO3 installations should not contain any extensions
-			in the \texttt{typo3conf/ext/} directory which haven't been installed
-			using Composer
+		\item TYPO3 extensions are Composer packages and should be installed using
+			Composer. Do not store extensions in the \texttt{typo3conf/ext/}
+			directory, if they haven't been installed using Composer
 		\item Migration: consider to move them into a separate directory and add
 			the directory as a \textit{repository}:
 
