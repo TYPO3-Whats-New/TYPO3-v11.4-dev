@@ -1,0 +1,27 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94959 | ContentObjectRenderer constructor in StandaloneView
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Fluid StandaloneView and ContentObjectRenderer}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Extensions that create an instance of the StandaloneView
+			should not pass an instance of the ContentObjectRenderer as a
+			constructor argument
+		\item Otherwise, TYPO3 generates a deprecation error
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
