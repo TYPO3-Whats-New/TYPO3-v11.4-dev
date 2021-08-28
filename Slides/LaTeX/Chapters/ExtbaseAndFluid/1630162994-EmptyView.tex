@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 95005 | Extbase EmptyView
+% Deprecation | 95003 | Extbase ViewInterface canRender()
 
 \begin{frame}[fragile]
 	\frametitle{Extbase and Fluid}
@@ -16,15 +17,22 @@
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item To clean-up and streamline Fluid view related functionality further,
+		\item To clean-up and streamline Fluid view related functionality,
 			the following class has been marked as \textbf{deprecated}:\newline
 			\small\texttt{TYPO3\textbackslash
 				CMS\textbackslash
 				Extbase\textbackslash
 				Mvc\textbackslash
 				View\textbackslash
-				EmptyView}
-
+				EmptyView}\normalsize
+		\item To simplify Fluid view related functionality, the method
+			\texttt{canRender()} has been removed from the following interface:\newline
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Extbase\textbackslash
+				Mvc\textbackslash
+				View\textbackslash
+				ViewInterface}\normalsize
 	\end{itemize}
 
 \end{frame}
