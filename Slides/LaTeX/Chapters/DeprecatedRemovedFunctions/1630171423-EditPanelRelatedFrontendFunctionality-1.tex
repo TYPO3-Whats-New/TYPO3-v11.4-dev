@@ -10,18 +10,21 @@
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
-	\framesubtitle{JavaScript Deprecations}
+	\framesubtitle{Edit Panel Deprecations (1)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
 		\item The following TypoScript properties have been marked as \textbf{deprecated}:
-			\begin{itemize}
-				\item \texttt{stdWrap.editPanel} and \texttt{stdWrap.editPanel.}
-				\item \texttt{stdWrap.editIcons} and \item \texttt{stdWrap.editIcons.}
-				\item cObject \texttt{EDITPANEL}
-			\end{itemize}
+\begin{lstlisting}
+stdWrap.editPanel
+stdWrap.editIcons
+\end{lstlisting}
+		\item The following cObject has been marked as \textbf{deprecated}:
+\begin{lstlisting}
+EDITPANEL
+\end{lstlisting}
 		\item The related methods and properties in the following classes
 			have been marked as \textbf{deprecated}:
 \begin{lstlisting}
@@ -30,15 +33,6 @@ TYPO3\CMS\Frontend\ContentObject\EditPanelContentObject
 TYPO3\CMS\Frontend\Plugin\AbstractPlugin
 TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
 \end{lstlisting}
-		\item The following class has been marked as \textbf{deprecated}:
-\begin{lstlisting}
-TYPO3\CMS\Frontend\ContentObject\EditPanelContentObject
-\end{lstlisting}
-		\item The following hook has been marked as \textbf{deprecated}:
-\begin{lstlisting}
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/classes/class.frontendedit.php']
-\end{lstlisting}
-
 	\end{itemize}
 
 \end{frame}
