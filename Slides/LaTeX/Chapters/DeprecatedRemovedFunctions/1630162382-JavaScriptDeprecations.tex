@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 94762 | Deprecate JavaScript topfsMod state
+% Deprecation | 95011 | Various global JavaScript functions and variables
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -18,6 +19,15 @@
 	\begin{itemize}
 		\item The JavaScript object \texttt{top.fsMod} (used in the page/file tree
 			in the TYPO3 backend) has been marked as \textbf{deprecated}
+		\item The following globally available variables have been marked as
+			\textbf{deprecated}:
+			\begin{itemize}\small
+				\item \texttt{top.currentSubScript}
+				\item \texttt{top.currentModuleLoaded}
+				\item \texttt{top.nextLoadModuleUrl}
+			\end{itemize}\normalsize
+		\item The global function \texttt{jump()} has been marked as
+			\textbf{deprecated}
 	\end{itemize}
 
 \end{frame}
