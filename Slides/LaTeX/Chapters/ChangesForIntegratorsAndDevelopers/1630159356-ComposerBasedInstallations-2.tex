@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94996 | In Composer Mode all Extensions should be installed with Composer
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Composer-based Installations (2)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Since TYPO3 extensions are Composer packages, they should be
+			installed using Composer
+		\item Composer-based TYPO3 installations should not contain any extensions
+			in the \texttt{typo3conf/ext/} directory which haven't been installed
+			using Composer
+		\item Migration: consider to move them into a separate path, e.g.
+			\texttt{packages/}
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Deprecation-94996-InComposerModeAllExtensionsShouldBeInstalledWithComposer.html}{changelog}
+			for further details
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
