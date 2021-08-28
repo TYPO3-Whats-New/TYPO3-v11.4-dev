@@ -7,6 +7,7 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Deprecation | 95005 | Extbase EmptyView
+% Deprecation | 94991 | Extbase AbstractView
 % Deprecation | 95003 | Extbase ViewInterface canRender()
 
 \begin{frame}[fragile]
@@ -17,22 +18,33 @@
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item To clean-up and streamline Fluid view related functionality,
-			the following class has been marked as \textbf{deprecated}:\newline
-			\small\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Extbase\textbackslash
-				Mvc\textbackslash
-				View\textbackslash
-				EmptyView}\normalsize
-		\item To simplify Fluid view related functionality, the method
-			\texttt{canRender()} has been removed from the following interface:\newline
-			\small\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Extbase\textbackslash
-				Mvc\textbackslash
-				View\textbackslash
-				ViewInterface}\normalsize
+		\item Clean-up work has been done to simplify and streamline the Fluid view
+			\begin{itemize}
+				\item The following classes have been marked as \textbf{deprecated}:\newline
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						EmptyView}\normalsize
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						AbstractView}\normalsize
+			\end{itemize}
+
+			\begin{itemize}
+				\item The method \texttt{canRender()} has been removed from the following interface:\newline
+					\small\texttt{TYPO3\textbackslash
+						CMS\textbackslash
+						Extbase\textbackslash
+						Mvc\textbackslash
+						View\textbackslash
+						ViewInterface}\normalsize
+			\end{itemize}
+
 	\end{itemize}
 
 \end{frame}
