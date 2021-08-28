@@ -21,8 +21,18 @@
 		\item Composer-based TYPO3 installations should not contain any extensions
 			in the \texttt{typo3conf/ext/} directory which haven't been installed
 			using Composer
-		\item Migration: consider to move them into a separate path, e.g.
-			\texttt{packages/}
+		\item Migration: consider to move them into a separate directory and add
+			the directory as a \textit{repository}:
+
+\begin{lstlisting}
+...
+"repositories": [{
+  "type": "path",
+  "url": "./packages/*/"
+}],
+...
+\end{lstlisting}
+
 		\item See
 			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Deprecation-94996-InComposerModeAllExtensionsShouldBeInstalledWithComposer.html}{changelog}
 			for further details
