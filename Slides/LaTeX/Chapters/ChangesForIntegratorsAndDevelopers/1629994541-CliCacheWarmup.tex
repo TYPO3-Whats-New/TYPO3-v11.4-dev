@@ -20,34 +20,13 @@
 \begin{lstlisting}
 ./bin/typo3 cache:warmup [--group <all|system|di|pages|...>]
 \end{lstlisting}
-		\item Specific cache groups can be defined via the
-			\texttt{-}\texttt{-group} option
+		\item Specific cache groups can be defined with the
+			\texttt{-}\texttt{-group} option:\newline
+			\small\texttt{system, \texttt{pages}, \texttt{di} or \texttt{all}\normalsize
+		\item Note: not \textit{all} caches can be warmed-up (yet)\newline
+			\small(e.g. frontend cache, RequireJS assets cache, Extbase caches,
+				Fluid templates are currently excluded)\normalsize
 	\end{itemize}
-	\begin{columns}[T]
-		\begin{column}{.04\textwidth}
-		\end{column}
-		\begin{column}{.48\textwidth}
-			\begin{itemize}\smaller
-				\item DI
-				\item ext\_localconf
-				\item TCA
-				\item ext\_tables
-				\item middleware stack
-				\item PackageManager
-				\item sites-configuration
-			\end{itemize}\normalsize
-		\end{column}
-		\begin{column}{.48\textwidth}
-			\begin{itemize}\smaller
-				\item expressionLanguageProviders
-				\item BackendRoutes
-				\item l10n
-				\item assets: BackendIcons
-				\item dashboard: DashboardPresets
-				\item dashboard: WidgetGroups
-			\end{itemize}\normalsize
-		\end{column}
-	\end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
