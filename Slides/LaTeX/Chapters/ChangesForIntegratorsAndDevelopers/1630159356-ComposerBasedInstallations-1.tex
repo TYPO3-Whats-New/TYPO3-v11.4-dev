@@ -7,11 +7,10 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Feature | 94996 | Consider all Composer installed extensions as active
-% Deprecation | 94996 | In Composer Mode all Extensions should be installed with Composer
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Composer-based Installations}
+	\framesubtitle{Composer-based Installations (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
@@ -23,16 +22,12 @@
 			to be active
 		\item Therefore, the Extension Manager and the TYPO3 CLI does not offer
 			the option to activate/deactivate extensions anymore
-		\item Composer-based TYPO3 installations don't need and in fact ignore
-			the file "\texttt{ext\_emconf.php}" in extensions from now on\newline
-			\small(developers may want to keep it for the time being though to
-			retain compatibility with TYPO3 instances in non-Composer mode)
-		\item Since TYPO3 extensions are Composer packages, they should be
-			installed using Composer
+		\item Composer-based TYPO3 installations don't need the file
+			"\texttt{ext\_emconf.php}" in extensions anymore
+		\item Developers may want to keep it for the time being though to retain
+			compatibility with TYPO3 instances in non-Composer mode
 		\item See
 			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94996-ConsiderAllComposerInstalledExtensionsAsActive.html}{changelog}
-			and
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Deprecation-94996-InComposerModeAllExtensionsShouldBeInstalledWithComposer.html}{deprecation}
 			for further details
 	\end{itemize}
 \end{frame}
