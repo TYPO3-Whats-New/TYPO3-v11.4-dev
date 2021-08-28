@@ -1,0 +1,33 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Deprecation | 94979 | Using CacheManager or Database Connections during TYPO3 bootstrap
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Optimizing Performance}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item To optimize the performance even further, TYPO3 becomes stricter
+			in terms of booting up the core configuration
+		\item Accessing the database or utilizing the Cache Manager in the
+		 	following files triggers a deprecation error:
+			\begin{itemize}
+				\item \texttt{ext\_localconf.php}
+				\item \texttt{ext\_tables.php}
+				\item \texttt{Configuration/TCA/*}
+			\end{itemize}
+		\item Extension authors should make sure that their extensions use
+			proper initialization in the right files
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
