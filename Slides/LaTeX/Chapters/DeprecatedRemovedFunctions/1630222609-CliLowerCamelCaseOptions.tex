@@ -24,13 +24,14 @@
 		\begin{column}{.06\textwidth}
 		\end{column}
 		\begin{column}{.47\textwidth}
-			\smaller\textbf{OLD}:\normalsize
+			\smaller\textbf{Deprecated}:\normalsize
 \begin{lstlisting}
 impexp:export --includeRelated
 impexp:export --includeStatic
 impexp:export --excludeDisabledRecords
 impexp:export --excludeHtmlCss
 impexp:export --saveFilesOutsideExportFile
+
 
 impexp:import --updateRecords
 impexp:import --ignorePid
@@ -40,13 +41,14 @@ impexp:import --enableLog
 \end{lstlisting}
 		\end{column}
 		\begin{column}{.47\textwidth}
-			\smaller\textbf{NEW}:\normalsize
+			\smaller\textbf{Replacement}:\normalsize
 \begin{lstlisting}
 impexp:export --include-related
 impexp:export --include-static
 impexp:export --exclude-disabled-records
 impexp:export --exclude-html-css
-impexp:export --save-files-outside-export-file
+impexp:export
+  --save-files-outside-export-file
 
 impexp:import --update-records
 impexp:import --ignore-pid
