@@ -10,32 +10,49 @@
 
 \begin{frame}[fragile]
 	\frametitle{Miscellaneous}
-	\framesubtitle{TYPO3 CLI (3)}
+	\framesubtitle{TYPO3 CLI command \texttt{impexp}}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following lowerCamelCase options have been marked as \textbf{deprecated}:
+		\item The following lowerCamelCase options of the \texttt{impexp}
+			CLI command have been marked as \textbf{deprecated}:
 	\end{itemize}
 
 	\begin{columns}[T]
-		\begin{column}{.04\textwidth}
+		\begin{column}{.06\textwidth}
 		\end{column}
-		\begin{column}{.48\textwidth}
-			\smaller OLD: \normalsize
+		\begin{column}{.47\textwidth}
+			\smaller\textbf{OLD}:\normalsize
 \begin{lstlisting}
-item 1
-item 2
-item 3
+impexp:export --includeRelated
+impexp:export --includeStatic
+impexp:export --excludeDisabledRecords
+impexp:export --excludeHtmlCss
+impexp:export --saveFilesOutsideExportFile
+
+impexp:import --updateRecords
+impexp:import --ignorePid
+impexp:import --forceUid
+impexp:import --importMode
+impexp:import --enableLog
 \end{lstlisting}
 		\end{column}
-		\begin{column}{.48\textwidth}
-			\smaller NEW: \normalsize
+		\begin{column}{.47\textwidth}
+			\smaller\textbf{NEW}:\normalsize
 \begin{lstlisting}
-item 1
-item 2
-item 3
+impexp:export --include-related
+impexp:export --include-static
+impexp:export --exclude-disabled-records
+impexp:export --exclude-html-css
+impexp:export --save-files-outside-export-file
+
+impexp:import --update-records
+impexp:import --ignore-pid
+impexp:import --force-uid
+impexp:import --import-mode
+impexp:import --enable-log
 \end{lstlisting}
 		\end{column}
 	\end{columns}
