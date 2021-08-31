@@ -1,0 +1,31 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 90197 | Introduce cache:flush console command
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{TYPO3 CLI (3)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item TYPO3's command line interface (CLI) supports a new command:
+\begin{lstlisting}
+./bin/typo3 cache:flush [--group <all|system|di|pages|...>]
+\end{lstlisting}
+		\item Integrators can now flush all caches (default) or selectively
+			through cache groups
+		\item Specific cache groups can be defined with the
+			\texttt{-}\texttt{-group} option:\newline
+			\small\texttt{system}, \texttt{pages}, \texttt{di}, or \texttt{all} (default: \texttt{all})\normalsize
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
