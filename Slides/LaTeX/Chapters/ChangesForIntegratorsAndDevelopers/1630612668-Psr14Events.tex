@@ -1,0 +1,30 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 95077 | New PSR-14 ProcessFileListActionsEvent
+% Feature | 95065 | New PSR-14 BootCompletedEvent
+
+\begin{frame}[fragile]
+	\frametitle{Miscellaneous}
+	\framesubtitle{PSR-14 Events}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
+
+	\begin{itemize}
+		\item Two new PSR-14 events have been added to the TYPO3 Core:
+			\begin{itemize}
+				\item \texttt{ProcessFileListActionsEvent}\newline
+					\smaller(event fires after the actions in the Filelist module are generated)\normalsize
+				\item \texttt{BootCompletedEvent}\newline
+					\smaller(event fires on every request when TYPO3 has been fully booted)\normalsize
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
