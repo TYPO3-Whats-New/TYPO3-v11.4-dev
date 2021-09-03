@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Important | 94876 | Remove Non-XML text validator from form editor
 % Deprecation | 95080 | FileDump CheckFileAccess hook
+% Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -23,6 +24,13 @@
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
 \end{lstlisting}
+		\item The return type \texttt{array} of the following function has been removed:\newline
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Frontend\textbackslash
+				Typolink\textbackslash
+				AbstractTypolinkBuilder::build}\normalsize\newline
+			\smaller(the function will return the \texttt{LinkResultInterface} in TYPO3 v12)\normalsize
 
 	\end{itemize}
 
