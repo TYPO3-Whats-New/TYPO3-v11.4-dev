@@ -1,0 +1,40 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 93197 | Resolve collection types of non-persistent objects
+
+\begin{frame}[fragile]
+	\frametitle{Extbase and Fluid}
+	\framesubtitle{Collection Types of Non-persistent Objects}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Collection types are used to define a specific class that should
+			be within Extbase's ObjectStorage class, for example:
+\begin{lstlisting}
+/**
+ * @param ObjectStorage<Item> $items
+ */
+public function setItems(ObjectStorage $items): void
+{
+  $this->items = $items;
+}
+\end{lstlisting}
+
+		\item These docblocks are analyzed so that the PropertyMapper knows
+			how to map incoming requests
+		\item Developers can now use collection types in docblock annotations
+			also for non-persistent objects
+		\item The collection type is considered while property mapping requests
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
