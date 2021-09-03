@@ -9,6 +9,7 @@
 % Important | 94876 | Remove Non-XML text validator from form editor
 % Deprecation | 95080 | FileDump CheckFileAccess hook
 % Deprecation | 95077 | Filelist editIconsHook
+% Deprecation | 95065 | Hook extTablesInclusion-PostProcessing
 % Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
 
 \begin{frame}[fragile]
@@ -25,6 +26,7 @@
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['extTablesInclusion-PostProcessing']
 \end{lstlisting}
 		\item The return type \texttt{array} of the following function has been removed:
 \begin{lstlisting}
