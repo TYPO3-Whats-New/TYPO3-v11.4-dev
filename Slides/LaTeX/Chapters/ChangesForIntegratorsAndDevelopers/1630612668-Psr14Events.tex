@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Feature | 95077 | New PSR-14 ProcessFileListActionsEvent
 % Feature | 95065 | New PSR-14 BootCompletedEvent
+% Feature | 95080 | New PSR-14 ModifyFileDumpEvent
 
 \begin{frame}[fragile]
 	\frametitle{Miscellaneous}
@@ -23,7 +24,10 @@
 					(event fires after the actions in the Filelist module are generated)
 				\vspace{0.1cm}
 				\item \texttt{BootCompletedEvent}\newline
-					(event fires on every request when TYPO3 has been fully booted)
+					(event fires on every request when TYPO3 is fully booted)
+				\vspace{0.1cm}
+				\item \texttt{ModifyFileDumpEvent}\newline
+					(event fires before dumping a file)
 			\end{itemize}
 	\end{itemize}
 \end{frame}
