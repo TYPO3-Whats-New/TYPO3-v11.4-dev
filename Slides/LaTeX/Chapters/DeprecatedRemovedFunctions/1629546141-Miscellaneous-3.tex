@@ -8,6 +8,7 @@
 % ------------------------------------------------------------------------------
 % Important | 94876 | Remove Non-XML text validator from form editor
 % Deprecation | 95080 | FileDump CheckFileAccess hook
+% Deprecation | 95077 | Filelist editIconsHook
 % Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
 
 \begin{frame}[fragile]
@@ -20,9 +21,10 @@
 	\begin{itemize}
 		\item The form validator "\textbf{Non-XML text}" has been removed from
 			the UI of the form editor
-		\item The following hook has been marked as \textbf{deprecated}:
+		\item The following hooks have been marked as \textbf{deprecated}:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
 \end{lstlisting}
 		\item The return type \texttt{array} of the following function has been removed:
 \begin{lstlisting}
