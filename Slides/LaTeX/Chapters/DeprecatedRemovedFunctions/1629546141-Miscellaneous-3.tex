@@ -7,17 +7,23 @@
 % @language	English
 % ------------------------------------------------------------------------------
 % Important | 94876 | Remove Non-XML text validator from form editor
+% Deprecation | 95080 | FileDump CheckFileAccess hook
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
 	\framesubtitle{Miscellaneous (3)}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
 		\item The form validator "\textbf{Non-XML text}" has been removed from
 			the UI of the form editor
+		\item The following hook has been marked as \textbf{deprecated}:
+\begin{lstlisting}
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
+\end{lstlisting}
+
 	\end{itemize}
 
 \end{frame}
