@@ -24,12 +24,10 @@
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
 \end{lstlisting}
-		\item The return type \texttt{array} of the following function has been removed:\newline
-			\small\texttt{TYPO3\textbackslash
-				CMS\textbackslash
-				Frontend\textbackslash
-				Typolink\textbackslash
-				AbstractTypolinkBuilder::build}\normalsize\newline
+		\item The return type \texttt{array} of the following function has been removed:
+\begin{lstlisting}
+TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder::build()
+\end{lstlisting}
 			\smaller(the function will return the \texttt{LinkResultInterface} in TYPO3 v12)\normalsize
 
 	\end{itemize}
