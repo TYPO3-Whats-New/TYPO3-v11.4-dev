@@ -10,6 +10,7 @@
 % Feature | 95065 | New PSR-14 BootCompletedEvent
 % Feature | 95080 | New PSR-14 ModifyFileDumpEvent
 % Feature | 95083 | New PSR-14 ModifyClearCacheActionsEvent
+% Feature | 95089 | New PSR-14 AfterFileCommandProcessedEvent
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
@@ -32,6 +33,9 @@
 				\vspace{0.1cm}
 				\item \texttt{ModifyClearCacheActionsEvent}\newline
 					(event allows for modifying "cache"-itemss in the backend top toolbar)
+				\vspace{0.1cm}
+				\item \texttt{AfterFileCommandProcessedEvent}\newline
+					(event allows for executing additional tasks, after a file operation has been performed)
 			\end{itemize}
 	\end{itemize}
 \end{frame}
