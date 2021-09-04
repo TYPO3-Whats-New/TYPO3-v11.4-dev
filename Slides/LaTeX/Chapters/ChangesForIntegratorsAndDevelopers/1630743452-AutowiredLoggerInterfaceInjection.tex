@@ -28,10 +28,8 @@ Psr\Log\LoggerInterface
 		\item For example:
 \begin{lstlisting}
 use Psr\Log\LoggerInterface;
-
 class MyClass {
   private LoggerInterface $logger;
-
   public function __construct(LoggerInterface $logger) {
     $this->logger = $logger;
   }
