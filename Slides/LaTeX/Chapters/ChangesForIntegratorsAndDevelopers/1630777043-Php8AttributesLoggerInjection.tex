@@ -1,0 +1,46 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 95079 | Support PHP 8 style Channel attribute for logger injection
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{Attribute "Channel" for Logger Injection (PHP v8)}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
+
+	\begin{itemize}
+		\item TYPO3 v11.4 introduces a PHP v8 specific feature: \textit{attributes}
+		\item This PHP feature allows developers to add meta data to classes,
+			methods, variables, etc.
+		\item Developers can now control the component name that an injected
+			Logger is created with
+		\item For example:\newline
+			\small(note the line \texttt{#[Channel('security')]})\normalsize
+\begin{lstlisting}
+use Psr\Log\LoggerInterface;
+use TYPO3\CMS\Core\Log\Channel;
+#[Channel('security')]
+class MyClass
+{
+  private LoggerInterface $logger;
+  public function __construct(LoggerInterface $logger)
+  {
+    $this->logger = $logger;
+  }
+}
+\end{lstlisting}
+		\item See
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-95079-SupportPHP8StyleChannelAttributeForLoggerInjection.html}{changelog}
+			for further details and code examples
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
