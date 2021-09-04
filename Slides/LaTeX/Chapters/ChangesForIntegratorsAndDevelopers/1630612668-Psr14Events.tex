@@ -9,6 +9,7 @@
 % Feature | 95077 | New PSR-14 ProcessFileListActionsEvent
 % Feature | 95065 | New PSR-14 BootCompletedEvent
 % Feature | 95080 | New PSR-14 ModifyFileDumpEvent
+% Feature | 95083 | New PSR-14 ModifyClearCacheActionsEvent
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
@@ -18,7 +19,7 @@
 	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
 
 	\begin{itemize}
-		\item Two new PSR-14 events have been added to the TYPO3 Core:
+		\item The following PSR-14 events have been added to the TYPO3 Core:
 			\begin{itemize}
 				\item \texttt{ProcessFileListActionsEvent}\newline
 					(event fires after the actions in the Filelist module are generated)
@@ -28,6 +29,9 @@
 				\vspace{0.1cm}
 				\item \texttt{ModifyFileDumpEvent}\newline
 					(event fires before dumping a file)
+				\vspace{0.1cm}
+				\item \texttt{ModifyClearCacheActionsEvent}\newline
+					(event allows for modifying "cache"-itemss in the backend top toolbar)
 			\end{itemize}
 	\end{itemize}
 \end{frame}
