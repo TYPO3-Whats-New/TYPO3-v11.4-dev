@@ -1,0 +1,28 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 95061 | Auto creation of MM tables from TCA
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{MM-tables}
+
+	\begin{itemize}
+		\item TYPO3's schema analyzer detects "MM" database tables and
+			automatically creates them based on the TCA definition
+		\item A table column TCA config defines MM tables by:\newline
+			\small\texttt{type='select'}, \texttt{type='group'}, or \texttt{type='inline'}\normalsize
+		\item Extension developers are encouraged to \textbf{remove} the
+			\texttt{CREATE TABLE} statements from the \texttt{ext\_tables.sql} files
+		\item The schema analyzer takes care of required fields, in addition to
+			\small\texttt{uid_local} and \texttt{uid_foreign}\normalsize
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
