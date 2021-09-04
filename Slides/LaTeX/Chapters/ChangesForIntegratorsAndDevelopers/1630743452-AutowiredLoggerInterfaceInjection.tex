@@ -1,0 +1,49 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 95044 | Support autowired LoggerInterface injection
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{LoggerInterface Injection}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+
+	\begin{itemize}
+		\item Services are no longer required to use
+			\texttt{Psr\textbackslash
+				Log\textbackslash
+				LoggerAwareInterface}
+			and
+			\texttt{Psr\textbackslash
+				Log\textbackslash
+				LoggerAwaireTrait}
+		\item Developers can add a constructor argument
+			\texttt{Psr\textbackslash
+				Log\textbackslash
+				LoggerInterface}
+			instead
+		\item For example:
+\begin{lstlisting}
+use Psr\Log\LoggerInterface;
+
+class MyClass {
+  private LoggerInterface $logger;
+
+  public function __construct(LoggerInterface $logger) {
+    $this->logger = $logger;
+  }
+}
+\end{lstlisting}
+
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
