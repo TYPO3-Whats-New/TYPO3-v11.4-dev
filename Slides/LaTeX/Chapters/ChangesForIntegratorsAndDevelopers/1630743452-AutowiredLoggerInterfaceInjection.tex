@@ -13,22 +13,18 @@
 	\framesubtitle{LoggerInterface Injection}
 
 	% decrease font size for code listing
-	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
+	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
 		\item Services are no longer required to use
-			\texttt{Psr\textbackslash
-				Log\textbackslash
-				LoggerAwareInterface}
-			and
-			\texttt{Psr\textbackslash
-				Log\textbackslash
-				LoggerAwaireTrait}
+\begin{lstlisting}
+Psr\Log\LoggerAwareInterface
+Psr\Log\LoggerAwaireTrait
+\end{lstlisting}
 		\item Developers can add a constructor argument
-			\texttt{Psr\textbackslash
-				Log\textbackslash
-				LoggerInterface}
-			instead
+\begin{lstlisting}
+Psr\Log\LoggerInterface
+\end{lstlisting}
 		\item For example:
 \begin{lstlisting}
 use Psr\Log\LoggerInterface;
@@ -41,7 +37,6 @@ class MyClass {
   }
 }
 \end{lstlisting}
-
 	\end{itemize}
 
 \end{frame}
