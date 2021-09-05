@@ -10,7 +10,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Attribute "Channel" for Logger Injection (PHP v8)}
+	\framesubtitle{...}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
@@ -20,19 +20,6 @@
 			\texttt{treeConfig] TCA configuration
 		\item \texttt{treeConfig} is used in the following two configuration:\newline
 			\small\texttt{renderType=selectTree} and \texttt{type=category}
-		\item The setting \texttt{startingPoints} lets developers set multiple
-			records as roots for tree records, based on a CSV list of page IDs
-		\item For example:
-\begin{lstlisting}
-// Example TCA config
-'config' => [
-  'treeConfig' => [
-      'startingPoints' => '1,2,3',
-  ]
-]
-\end{lstlisting}
-		\item Developers can also access values from the site configuration by
-		 	using the \small\texttt\{\#\#\#SITE:...\#\#\#}\normalsize syntax
 	\end{itemize}
 
 \end{frame}
