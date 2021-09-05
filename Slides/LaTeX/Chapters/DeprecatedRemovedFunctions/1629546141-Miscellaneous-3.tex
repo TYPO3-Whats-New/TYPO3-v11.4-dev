@@ -6,15 +6,8 @@
 % @link		https://typo3.org/help/documentation/whats-new/
 % @language	English
 % ------------------------------------------------------------------------------
-% Important | 94876 | Remove Non-XML text validator from form editor
-% Deprecation | 95080 | FileDump CheckFileAccess hook
-% Deprecation | 95077 | Filelist editIconsHook
-% Deprecation | 95065 | Hook extTablesInclusion-PostProcessing
-% Deprecation | 95089 | ExtendedFileUtility ProcessData hook
-% Deprecation | 95083 | Backend toolbar CacheActions hook
-% Deprecation | 95105 | DatabaseRecordList hooks
-
-% Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
+% Deprecation | 94956 | Public cObj
+% Deprecation | 95062 | skipSorting argument of RelationHandler->writeForeignField()
 
 \begin{frame}[fragile]
 	\frametitle{Deprecated/Removed Functions}
@@ -24,23 +17,16 @@
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The form validator "\textbf{Non-XML text}" has been removed from
-			the UI of the form editor
-		\item The following hooks have been marked as \textbf{deprecated}:
-\begin{lstlisting}
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['extTablesInclusion-PostProcessing']
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['actions']
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_extfilefunc.php']['processData']
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['additionalBackendItems']['cacheActions']
-\end{lstlisting}
-		\item The return type \texttt{array} of the following function has been removed:\newline
-			\smaller(the function will return the \texttt{LinkResultInterface} in TYPO3 v12)\normalsize
-\begin{lstlisting}
-TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder::build()
-\end{lstlisting}
-
+		\item Declaring the property \texttt{\$cObj} with a public visibility in
+			a class called by \texttt{ContentObjectRenderer->callUserFunction()}
+			triggers a deprecation error
+		\item The 4th arguments of the following method has been marked as
+			\textbf{deprecated}:
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Core\textbackslash
+				Database\textbackslash
+				RelationHandler->writeForeignField()}\normalsize
 	\end{itemize}
 
 \end{frame}
