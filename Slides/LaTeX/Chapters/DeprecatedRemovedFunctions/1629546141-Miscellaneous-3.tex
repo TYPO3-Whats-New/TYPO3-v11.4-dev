@@ -10,6 +10,10 @@
 % Deprecation | 95080 | FileDump CheckFileAccess hook
 % Deprecation | 95077 | Filelist editIconsHook
 % Deprecation | 95065 | Hook extTablesInclusion-PostProcessing
+% Deprecation | 95089 | ExtendedFileUtility ProcessData hook
+% Deprecation | 95083 | Backend toolbar CacheActions hook
+% Deprecation | 95105 | DatabaseRecordList hooks
+
 % Important | 94889 | AbstractTypoLinkBuilder::build now returns arrayLinkResultInterface
 
 \begin{frame}[fragile]
@@ -27,6 +31,9 @@
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['extTablesInclusion-PostProcessing']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['actions']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_extfilefunc.php']['processData']
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['additionalBackendItems']['cacheActions']
 \end{lstlisting}
 		\item The return type \texttt{array} of the following function has been removed:\newline
 			\smaller(the function will return the \texttt{LinkResultInterface} in TYPO3 v12)\normalsize
