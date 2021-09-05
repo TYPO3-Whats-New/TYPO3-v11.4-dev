@@ -1,0 +1,32 @@
+% ------------------------------------------------------------------------------
+% TYPO3 Version 11.4 - What's New (English Version)
+%
+% @author	Michael Schams <schams.net>
+% @license	Creative Commons BY-NC-SA 3.0
+% @link		https://typo3.org/help/documentation/whats-new/
+% @language	English
+% ------------------------------------------------------------------------------
+% Feature | 94889 | Add result option to typolink returnLast parameter
+
+\begin{frame}[fragile]
+	\frametitle{Changes for Integrators and Developers}
+	\framesubtitle{New Class \texttt{LinkResult}}
+
+	% decrease font size for code listing
+	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
+
+	\begin{itemize}
+		\item A new class has been introduced:\newline
+			\small\texttt{TYPO3\textbackslash
+				CMS\textbackslash
+				Frontend\textbackslash
+				Typolink}\normalsize
+		\item This class represents a created link to a resource (page, email. etc.)
+		\item The object contains the base result of a generated link by TypoLink
+			and allows user to handle link data in a more consistent way
+		\itm It also simplifies typolink handling in, for example, JSON output
+	\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
