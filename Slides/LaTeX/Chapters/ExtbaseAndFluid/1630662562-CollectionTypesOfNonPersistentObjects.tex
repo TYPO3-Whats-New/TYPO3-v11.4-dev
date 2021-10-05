@@ -9,14 +9,14 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{Collection Types of Non-persistent Objects}
+	\framesubtitle{Type d'élément de collection et objets non persistants}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item Collection types are used to define a specific class that should
-			be within Extbase's ObjectStorage class, for example:
+		\item Les types d'élément de collection sont utilisés pour spécifier la classe qui doit
+			être contenue dans la classe ObjectStorage d'Extbase, par exemple~:
 \begin{lstlisting}
 /**
  * @param ObjectStorage<Item> $items
@@ -27,10 +27,9 @@ public function setItems(ObjectStorage $items): void
 }
 \end{lstlisting}
 
-		\item These docblocks are analyzed so that the PropertyMapper knows
-			how to map incoming requests
-		\item Developers can now use collection types in docblock annotations
-			also for non-persistent objects
+		\item Ces blocs de documentation sont analysés de sorte que le lieur de propriété sache
+			comment associer les requêtes entrantes
+		\item Les développeurs peuvent aussi indiquer des types pour des objets non persistants
 	\end{itemize}
 
 \end{frame}

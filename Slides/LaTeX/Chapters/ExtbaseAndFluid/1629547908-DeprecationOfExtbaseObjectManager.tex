@@ -9,23 +9,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{Extbase ObjectManager}
+	\framesubtitle{Gestionnaire d'objets Extbase}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The TYPO3 v11 Core does not use the Extbase ObjectManager anymore
-		\item All related components have been marked as \textbf{deprecated}
-		\item For example, calling \texttt{ObjectManager->get()} now writes
-			a deprecation warning to the log
-		\item Developers are encouraged to use Symfony's
+		\item Le noyau de TYPO3 v11 n'utilise plus le gestionnaire d'objets d'Extbase (ObjectManager)
+		\item Tous les composants liés sont marqués \textbf{dépréciés}
+		\item Par exemple, appeler \texttt{ObjectManager->get()} écrit un avertissement
+			de dépréciation dans le journal
+		\item Les développeurs sont encouragés à utiliser le composant
 			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/DependencyInjection/Index.html}{DependencyInjection}
-			component since TYPO3 v10
-		\item The ObjectManager and all related components will be removed in TYPO3 v12
-		\item See
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.4/Deprecation-90803-DeprecationOfObjectManagergetInExtbaseContext.html#changelog-deprecation-90803-objectmanagerget}{changelog}
-			for migration options
+			de Symfony depuis TYPO3 v10
+		\item Le gestionnaire d'objet et les composants liés seront retirés en TYPO3 v12
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/10.4/Deprecation-90803-DeprecationOfObjectManagergetInExtbaseContext.html#changelog-deprecation-90803-objectmanagerget}{journal des changements (en)}
+			pour les options de migration
 	\end{itemize}
 
 \end{frame}

@@ -9,27 +9,27 @@
 
 \begin{frame}[fragile]
 	\frametitle{Extbase et Fluid}
-	\framesubtitle{Fluid ViewHelpers}
+	\framesubtitle{ViewHelpers Fluid}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item The Fluid ViewHelpers "\texttt{f:uri.external}" and "\texttt{f:link.external}"
-			now use \textbf{https} as the default scheme
-		\item For example:
+		\item Les ViewHelpers Fluid «~\texttt{f:uri.external}~» et «~\texttt{f:link.external}~»
+			utilisent le schéma \textbf{https} par défaut
+		\item Par exemple~:
 \begin{lstlisting}
 <f:link.external uri="example.com">
   external link
 </f:link.external>
 \end{lstlisting}
-			This generates the link:
+			Génère le lien~:
 \begin{lstlisting}
 <a href="https://example.com">external link</a>
 \end{lstlisting}
 
-		\item To overwrite the default value, developers can explicitly set the
-			scheme as follows (e.g. "http"):
+		\item Pour surcharger la valeur par défaut, les développeurs peuvent définir le
+			schéma comme suit (ex. «~http~»)~:
 \begin{lstlisting}
 <f:link.external uri="example.com" defaultScheme="http">
   external link
