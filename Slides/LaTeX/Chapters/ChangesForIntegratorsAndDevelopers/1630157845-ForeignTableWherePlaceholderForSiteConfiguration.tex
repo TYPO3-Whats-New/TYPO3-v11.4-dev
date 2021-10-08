@@ -9,23 +9,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{TCA: \texttt{foreign\_table\_where}}
+	\framesubtitle{TCA~: \texttt{foreign\_table\_where}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item The \texttt{foreign\_table\_where} setting in the TCA now also
-			supports the following markers:
+		\item La configuration \texttt{foreign\_table\_where} du TCA prend
+			en charge les marqueurs suivants~:
 
 			\begin{itemize}
 				\item \texttt{\#\#\#SITE:<KEY>\#\#\#}\newline
-					(e.g. \texttt{\#\#\#SITE:rootPageId\#\#\#})
+					(ex. \texttt{\#\#\#SITE:rootPageId\#\#\#})
 				\item \texttt{\#\#\#SITE:<KEY>.<SUBKEY>\#\#\#}\newline
-					(e.g. \texttt{\#\#\#SITE:mySetting.categoryPid\#\#\#})
+					(ex. \texttt{\#\#\#SITE:mySetting.categoryPid\#\#\#})
 			\end{itemize}
 
-		\item This enables developers to access settings from the site configuration
+		\item Les développeurs peuvent ainsi accéder aux options de la configuration de site
 
 	\end{itemize}
 \end{frame}

@@ -9,17 +9,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{TCA Option \texttt{treeConfig}}
+	\framesubtitle{Option TCA \texttt{treeConfig}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item A new setting \texttt{startingPoints} has been introduced to the
-			\texttt{treeConfig} TCA configuration
-		\item The setting \texttt{startingPoints} lets developers set multiple
-			records as roots for tree records, based on a CSV list of page IDs
-		\item For example:
+		\item L'option \texttt{startingPoints} est introduit à la configuration TCA
+			\texttt{treeConfig}
+		\item Cette option \texttt{startingPoints} permet aux développeurs de définir
+			de multiples enregistrements comme racine de l'arborescence, basé sur une liste CSV d'identifiants de page
+		\item Par exemple~:
 \begin{lstlisting}
 // Example TCA config
 'config' => [
@@ -28,8 +28,8 @@
   ]
 ]
 \end{lstlisting}
-		\item Developers can also access values from the site configuration by
-		 	using the syntax: \small"\texttt{\#\#\#SITE:...\#\#\#}"\normalsize
+		\item Les développeurs peuvent aussi accéder à des valeurs venant de la configuration de site
+		 	en utilisant la syntaxe~: \small"\texttt{\#\#\#SITE:...\#\#\#}"\normalsize
 	\end{itemize}
 
 \end{frame}

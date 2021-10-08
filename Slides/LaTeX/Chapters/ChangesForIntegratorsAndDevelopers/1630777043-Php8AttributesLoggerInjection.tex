@@ -9,18 +9,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Attribute "Channel" for Logger Injection (PHP v8)}
+	\framesubtitle{Attribut «~Channel~» pour l'injection du Logger (PHP v8)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item TYPO3 v11.4 introduces a PHP v8 specific feature: \textit{attributes}
-		\item This PHP feature allows developers to add meta data to classes,
-			methods, variables, etc.
-		\item Developers can now control the component name that an injected
-			Logger is created with
-		\item For example \small(note the line: \texttt{\#[Channel('security')]}):\normalsize
+		\item TYPO3 v11.4 introduit la fonctionnalité PHP v8 specifique~: \textit{attributes}
+		\item Celle-ci permet aux développeurs d'ajouter des métadonnées aux classes, méthodes, variables, etc.
+		\item Les développeurs peuvent contrôler le nom du composant qu'un Logger injecté sera crée avec
+		\item Par exemple \small(notez la ligne~: \texttt{\#[Channel('security')]})~:\normalsize
 \begin{lstlisting}
 use Psr\Log\LoggerInterface;
 use TYPO3\CMS\Core\Log\Channel;

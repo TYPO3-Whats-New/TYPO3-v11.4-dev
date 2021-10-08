@@ -10,17 +10,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{SoftReference Parsers}
+	\framesubtitle{Traitement des références légères}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Developers can now register user-defined
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SoftReferences/Index.html#soft-references}{soft reference}
-			parsers
+		\item Les développeurs peuvent inscrire leur propre traitement des
+			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/SoftReferences/Index.html#soft-references}{références légères (en)}
 
-		\item For example (in file \texttt{Configuration/Services.yaml}):
+		\item Par exemple (dans le fichier \texttt{Configuration/Services.yaml})~:
 \begin{lstlisting}
 Vendor\MyExtension\SoftReference\MySoftReferenceParser:
   tags:
@@ -28,12 +27,12 @@ Vendor\MyExtension\SoftReference\MySoftReferenceParser:
       parserKey: your_key
 \end{lstlisting}
 
-		\item Parsers have to implement the following new interface:
+		\item Les implémentations doit utiliser l'interface~:
 \begin{lstlisting}
 TYPO3\CMS\Core\DataHandling\SoftReference\SoftReferenceParserInterface
 \end{lstlisting}
 
-		\item The old registration method has been marked as \textbf{deprecated}:
+		\item La méthode d'enregistrement précédente est marquée \textbf{dépréciée}~:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['GLOBAL']['softRefParser']
 \end{lstlisting}

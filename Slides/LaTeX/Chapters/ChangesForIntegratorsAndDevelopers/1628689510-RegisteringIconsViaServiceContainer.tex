@@ -9,15 +9,15 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Custom Icon Registration}
+	\framesubtitle{Inscription de pictogrammes}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Extension developers can now register custom icons through a Service Container
-		\item The new approach improves the performance of requests
-		\item Store the configuration in file \texttt{Configuration/Icons.php}:
+		\item Les développeurs d'extension peuvent inscrire leurs pictogrammes à l'aide d'un conteneur de service
+		\item La nouvelle approche améliore significativement les performances des requêtes
+		\item Enregistrer la configuration dans le fichier \texttt{Configuration/Icons.php}~:
 \begin{lstlisting}
 <?php
 return [

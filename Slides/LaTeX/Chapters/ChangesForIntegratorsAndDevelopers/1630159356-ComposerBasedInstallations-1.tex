@@ -9,25 +9,24 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Composer-based Installations (1)}
+	\framesubtitle{Installation avec Composer (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item The file "\texttt{PackageStates.php}" has become obsolete in
-			Composer-based installations
-		\item All extensions added to the system by Composer are now considered
-			to be active
-		\item Therefore, the Extension Manager and the TYPO3 CLI don't offer the
-			option to activate/deactivate extensions anymore
-		\item Composer-based TYPO3 installations don't need the file
-			"\texttt{ext\_emconf.php}" in extensions anymore
-		\item Developers may want to keep it for the time being though to retain
-			compatibility with TYPO3 instances in non-Composer mode
-		\item See
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94996-ConsiderAllComposerInstalledExtensionsAsActive.html}{changelog}
-			for further details
+		\item Le fichier «~\texttt{PackageStates.php}~» est obsolète dans les installations
+			avec Composer
+		\item Toutes les extensions ajoutées au système par Composer sont considérée actives
+		\item Par conséquent, le Gestionnaire d'extensions et la ligne de commande TYPO3 n'offrent plus
+			les options pour activer et désactiver les extensions
+		\item Les installlations Composer de TYPO3 ne nécessitent plus le fichier
+			"\texttt{ext\_emconf.php}" dans les extensions
+		\item Les développeurs peuvent garder le fichier pour le moment afin de garder la
+			compatibilité avec les installations TYPO3 n'utilisant pas Composer
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94996-ConsiderAllComposerInstalledExtensionsAsActive.html}{journal des changements (en)}
+			pour plus d'informations
 	\end{itemize}
 \end{frame}
 

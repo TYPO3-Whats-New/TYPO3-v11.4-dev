@@ -9,24 +9,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Miscellaneous}
-	\framesubtitle{The \texttt{HtmlParser} Class}
+	\framesubtitle{La classe \texttt{HtmlParser}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item The
-			\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Examples/ParsingHtml/Index.html}{HTML Parser}
-			now supports the attribute "\texttt{srcset}"
-		\item This is particularly important for responsive images
-		\item Example 1:
+		\item L'\href{https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Examples/ParsingHtml/Index.html}{analyseur HTML}
+			prend en charge l'attribut «~\texttt{srcset}~»
+		\item C'est important pour les images responses
+		\item Exemple 1~:
 \begin{lstlisting}
 <picture>
   <source media="(max-width: 799px)" srcset="small-image.jpg">
   <source media="(min-width: 800px)" srcset="large-image.jpg">
 </picture>
 \end{lstlisting}
-		\item Example 2:
+		\item Exemple 2~:
 \begin{lstlisting}
 <img srcset="small-image.jpg 640w, large-image.jpg 1024w"
   sizes="(max-width: 799px) 640px, 1024px"

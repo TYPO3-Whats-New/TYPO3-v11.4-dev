@@ -9,19 +9,19 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Global Namespace}
+	\framesubtitle{Espace de nom global}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item When TYPO3 warms up caches, the code of the following files
-			are now scoped into the global namespace:\newline
-			\small\texttt{ext\_localconf.php} and \texttt{ext\_table.php}\normalsize
-		\item This means that extension developers \textbf{must not} wrap the
-			content of these files in a local namespace anymore
-		\item Extension authors can now import classes by the
-			\texttt{use}-statement:
+		\item Quand TYPO3 initialise les caches, le code des fichiers suivants est
+			mis dans la porté de l'espace de nom global~:\newline
+			\small\texttt{ext\_localconf.php} et \texttt{ext\_table.php}\normalsize
+		\item Ceci signifie que les développeurs d'extension \textbf{ne doivent plus} encapsuler leur
+			contenu dans un espace de nom local
+		\item Les auteurs d'extensions peuvent importer les classes avec l'instruction
+			\texttt{use}~:
 \begin{lstlisting}
 <?php
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;

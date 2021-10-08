@@ -9,21 +9,21 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Important Fields}
+	\framesubtitle{Champs importants}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following two fields are now always enabled/shown in the TCA:
+		\item Ces deux champs sont maintenants toujours activés/affiché dans le TCA~:
 			\begin{itemize}
 				\item \texttt{tt\_content.colPos}
 				\item \texttt{pages.slug}
 			\end{itemize}
-		\item This prevents integrators from accidentally misconfigure the
-			access permissions for backend users
-		\item The following TSconfig overwrites the default settings and hides
-			these fields if required:
+		\item Ceci empêche les intégrateurs de mal configurer accidentellement les
+			permissions d'accès des utilisateurs backend
+		\item Le TSconfig suivant surcharge les paramètres par défaut et cache ces
+			champs si requis~:
 \begin{lstlisting}
 TCEFORM.pages.slug.disabled = 1
 TCEFORM.tt_content.colPos.disabled = 1

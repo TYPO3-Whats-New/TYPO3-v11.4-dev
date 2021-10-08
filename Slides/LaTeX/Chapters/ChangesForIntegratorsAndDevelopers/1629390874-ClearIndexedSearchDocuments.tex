@@ -9,19 +9,19 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Indexed Search}
+	\framesubtitle{Recherche indexée}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The system extension \texttt{EXT:indexed\_search} now features
-			a new configuration option:
-			\small"\texttt{basic.deleteFromIndexAfterEditing}"\normalsize
-		\item If enabled (which is the default) and a page or its content is
-			updated, the page and its content are removed from the search index
-		\item If this option is disabled, backend users have to manually clear
-			the index as required
+		\item L'extension système \texttt{EXT:indexed\_search} possède
+			une nouvelle option de configuration~:
+			\small«~\texttt{basic.deleteFromIndexAfterEditing}~»\normalsize
+		\item Si activée (elle l'est par défaut) et une page ou son contenu est mis à jour,
+			la page et son contenu est retiré de l'index de recherche
+		\item Si l'option est désactivée, les utilisateurs backend doivent nettoyer manuellement
+			l'index lorsque requis
 	\end{itemize}
 
 \end{frame}

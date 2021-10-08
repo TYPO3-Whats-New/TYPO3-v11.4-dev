@@ -9,27 +9,27 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{TCA Configuration: \texttt{fileFolderConfig}}
+	\framesubtitle{Configuration TCA~: \texttt{fileFolderConfig}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Integrators can overwrite the new TCA configuration in TSconfig
-		\item For example:
+		\item Les intégrateurs peuvent surcharger la configuration TCA en TSconfig
+		\item Par exemple~:
 \begin{lstlisting}
 config.fileFolderConfig.folder
 config.fileFolderConfig.allowedExtensions
 config.fileFolderConfig.depth
 \end{lstlisting}
 
-		\item Read more:
+		\item Lire plus~:
 
 			\begin{itemize}
-				\item TCA configuration
-					"\href{https://docs.typo3.org/m/typo3/reference-tca/master/en-us/ColumnsConfig/Type/Select/Properties/FileFolder.html#filefolder}{FileFolder}"
-					(TYPO3 documentation)
-				\item Further details about the change in the \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94406-OverrideFileFolderTCAConfigurationWithTSconfig.html}{changelog}
+				\item Configuration TCA
+					«~\href{https://docs.typo3.org/m/typo3/reference-tca/master/en-us/ColumnsConfig/Type/Select/Properties/FileFolder.html#filefolder}{FileFolder}~»
+					(documentation TYPO3)
+				\item Plus d'informations sur le changement dans le \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94406-OverrideFileFolderTCAConfigurationWithTSconfig.html}{journal des changements (en)}
 		\end{itemize}
 
 	\end{itemize}

@@ -9,16 +9,16 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{New Option: \texttt{showNewRecordLink}}
+	\framesubtitle{Option~: \texttt{showNewRecordLink}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Developers can now disable the "New record" link of TCA inline
-			elements independently from the "+" button and all other "level links"
-		\item A new option \texttt{showNewRecordLink} has been introduced for this
-		\item For example (to disable the "New record" button):
+		\item Les développeurs peuvent désactiver le lien «~Nouvel enregistrement~» des éléments TCA inline
+			indépendamment du bouton «~+~» et des autres liens
+		\item L'option \texttt{showNewRecordLink} est introduite pour cela
+		\item Par exemple (pour désactive le bouton «~Nouvel enregistrement~»)~:
 \begin{lstlisting}
 'inlineField' => [
   'label' => 'Inline without New record link',
@@ -31,7 +31,7 @@
 ]
 \end{lstlisting}
 
-		\item The following option only manages the display of the "+" button now:
+		\item Cette option ne gère plus que l'affichage du bouton «~+~»~:
 \begin{lstlisting}
 ['config']['appearance']['enabledControls']['new']
 \end{lstlisting}

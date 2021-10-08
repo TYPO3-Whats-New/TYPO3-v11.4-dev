@@ -9,18 +9,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{MM-tables}
+	\framesubtitle{Tables MM}
 
 	\begin{itemize}
-		\item TYPO3's schema analyzer detects "MM" database tables and
-			automatically creates them based on the TCA definition
-		\item A table column TCA config defines MM tables by:\newline
-			\small\texttt{type='select'}, \texttt{type='group'}, or \texttt{type='inline'}\normalsize
-		\item Extension developers are encouraged to \textbf{remove} the
-			\texttt{CREATE TABLE} statements from the \texttt{ext\_tables.sql}
-			files of "MM" tables
-		\item The schema analyzer takes care of required fields, in addition to
-			\small\texttt{uid\_local} and \texttt{uid\_foreign}\normalsize
+		\item L'analyseur de schéma TYPO3 détecte les tables «~MM~» de la base de données et
+			les créent automatiquement à partir de la définition TCA
+		\item Une configuration TCA de colonne définie une table MM pour~:\newline
+			\small\texttt{type='select'}, \texttt{type='group'}, ou \texttt{type='inline'}\normalsize
+		\item Les développeurs d'extension sont encouragés à \textbf{retirer} les instructions
+			\texttt{CREATE TABLE} des fichiers \texttt{ext\_tables.sql} pour les tables «~MM~»
+		\item L'analyseur de schéma prend soin des champs requis en plus de
+			\small\texttt{uid\_local} et \texttt{uid\_foreign}\normalsize
 	\end{itemize}
 
 \end{frame}

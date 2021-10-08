@@ -9,22 +9,22 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{LoggerInterface Injection}
+	\framesubtitle{Injection de LoggerInterface}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item Services are no longer required to use
+		\item Il n'est plus requis que les services utilisent
 \begin{lstlisting}
 Psr\Log\LoggerAwareInterface
 Psr\Log\LoggerAwaireTrait
 \end{lstlisting}
-		\item Developers can add a constructor argument
+		\item Les développeurs peuvent utiliser un argument de constructeur
 \begin{lstlisting}
 Psr\Log\LoggerInterface
 \end{lstlisting}
-		\item For example:
+		\item Par exemple~:
 \begin{lstlisting}
 use Psr\Log\LoggerInterface;
 class MyClass {

@@ -9,17 +9,17 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Composer-based Installations (2)}
+	\framesubtitle{Installation avec Composer (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item TYPO3 extensions are Composer packages and should be installed using
-			Composer. Do not store extensions in the \texttt{typo3conf/ext/}
-			directory, if they haven't been installed using Composer
-		\item Migration: consider to move them into a separate directory and add
-			the directory as a \textit{repository}, for example:
+		\item Les extensions TYPO3 sont des paquets Composer et devraient être installées par Composer.
+			N'enregistrez pas d'extensions dans le dossier \texttt{typo3conf/ext/},
+			si elles n'ont pas été installées par Composer
+		\item Migration~: considérez le déplacement de ces extensions dans un dossier séparé et ajoutez
+			le dossier comme \textit{dépôt}, par exemple~:
 
 \begin{lstlisting}
 ...
@@ -30,9 +30,9 @@
 ...
 \end{lstlisting}
 
-		\item See
-			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Deprecation-94996-InComposerModeAllExtensionsShouldBeInstalledWithComposer.html}{changelog}
-			for further details
+		\item Voir le
+			\href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/master/Deprecation-94996-InComposerModeAllExtensionsShouldBeInstalledWithComposer.html}{journal des changements}
+			pour plus d'informations
 	\end{itemize}
 \end{frame}
 

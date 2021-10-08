@@ -9,23 +9,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Changements pour les intégrateurs et développeurs}
-	\framesubtitle{Performance Optimization}
+	\framesubtitle{Optimisation des performances}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item To optimize the performance even further, TYPO3 becomes stricter
-			in terms of booting up the core configuration
-		\item Accessing the database or utilizing the Cache Manager in the
-		 	following files triggers a deprecation error:
+		\item Pour améliorer encore plus les performances, TYPO3 devient plus strict en
+		    terme de démarrage de la configuration principale
+		\item Accéder à la base de données ou utiliser le Gestionnaire du cache dans les fichiers
+		 	suivants déclenche une erreur de dépréciation~:
 			\begin{itemize}
 				\item \texttt{ext\_localconf.php}
 				\item \texttt{ext\_tables.php}
 				\item \texttt{Configuration/TCA/*}
 			\end{itemize}
-		\item Extension authors should make sure that their extensions use
-			proper initialization in the right places
+		\item Les auteurs d'extensions doivent s'assurer qu'elles effectuent leurs initialisations
+			au bon endroit
 	\end{itemize}
 \end{frame}
 
