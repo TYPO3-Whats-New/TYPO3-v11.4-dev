@@ -16,14 +16,14 @@
 
 \begin{frame}[fragile]
 	\frametitle{Fonctions dépréciées/retirées}
-	\framesubtitle{Miscellaneous (4)}
+	\framesubtitle{Divers (4)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item The validator "Non-XML text" has been removed from the UI of the form editor
-		\item The following hooks have been marked as \textbf{deprecated}:
+		\item Le validateur «~Texte non-XML~» est retiré de l'interface de l'éditeur de formulaire
+		\item Le hook suivante est marqué \textbf{déprécié}~:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['FileDumpEID.php']['checkFileAccess']
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['fileList']['editIconsHook']
@@ -32,8 +32,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['typo3/class.db_list_extra.inc']['acti
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_extfilefunc.php']['processData']
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['additionalBackendItems']['cacheActions']
 \end{lstlisting}
-		\item The return type \texttt{array} of the following function has been removed:\newline
-			\smaller(the function will return the \texttt{LinkResultInterface} in TYPO3 v12)\normalsize
+		\item Le type de retour \texttt{array} de la méthode suivante est retiré~:\newline
+			\smaller(la fonction retournera un \texttt{LinkResultInterface} dans TYPO3 v12)\normalsize
 \begin{lstlisting}
 TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder::build()
 \end{lstlisting}
