@@ -8,28 +8,28 @@
 % Important | 94615 | Fluid view helpers f:linkexternal and f:uriexternal use https by default
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
+	\frametitle{Extbase und Fluid}
 	\framesubtitle{Fluid ViewHelpers}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item The Fluid ViewHelpers "\texttt{f:uri.external}" and "\texttt{f:link.external}"
-			now use \textbf{https} as the default scheme
-		\item For example:
+		\item Die Fluid ViewHelpers "\texttt{f:uri.external}" und "\texttt{f:link.external}"
+			verwenden jetzt \textbf{https} als Standardschema
+		\item Zum Beispiel:
 \begin{lstlisting}
 <f:link.external uri="example.com">
   external link
 </f:link.external>
 \end{lstlisting}
-			This generates the link:
+			Dies erzeugt den Link:
 \begin{lstlisting}
 <a href="https://example.com">external link</a>
 \end{lstlisting}
 
-		\item To overwrite the default value, developers can explicitly set the
-			scheme as follows (e.g. "http"):
+		\item Um den Standardwert zu überschreiben, können Entwickler explizit das Schema wie folgt
+			festlegen (z.B. "http"):
 \begin{lstlisting}
 <f:link.external uri="example.com" defaultScheme="http">
   external link
