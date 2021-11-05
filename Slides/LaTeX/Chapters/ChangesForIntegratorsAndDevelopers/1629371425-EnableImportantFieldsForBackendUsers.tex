@@ -8,22 +8,22 @@
 % Important | 92202 | Remove exclude from important fields
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Important Fields}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Wichtige Felder}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The following two fields are now always enabled/shown in the TCA:
+		\item Die folgenden zwei Felder sind jetzt immer aktiviert/angezeigt in der TCA:
 			\begin{itemize}
 				\item \texttt{tt\_content.colPos}
 				\item \texttt{pages.slug}
 			\end{itemize}
-		\item This prevents integrators from accidentally misconfigure the
-			access permissions for backend users
-		\item The following TSconfig overwrites the default settings and hides
-			these fields if required:
+		\item Dies verhindert, dass Integratoren versehentlich die Zugriffsberechtigungen
+			für Backend-Benutzer falsch konfigurieren
+		\item Die folgende TSconfig überschreibt die Standardeinstellungen und
+			blendet diese Felder, falls erforderlich:
 \begin{lstlisting}
 TCEFORM.pages.slug.disabled = 1
 TCEFORM.tt_content.colPos.disabled = 1
