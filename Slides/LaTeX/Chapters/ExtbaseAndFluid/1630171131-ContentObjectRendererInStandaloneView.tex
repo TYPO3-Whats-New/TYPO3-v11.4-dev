@@ -8,17 +8,17 @@
 % Deprecation | 94959 | ContentObjectRenderer constructor in StandaloneView
 
 \begin{frame}[fragile]
-	\frametitle{Extbase and Fluid}
-	\framesubtitle{Fluid StandaloneView and ContentObjectRenderer}
+	\frametitle{Extbase und Fluid}
+	\framesubtitle{Fluid StandaloneView und ContentObjectRenderer}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item Extensions that create an instance of the StandaloneView
-			should not pass an instance of the ContentObjectRenderer as a
-			constructor argument
-		\item Otherwise, TYPO3 generates a deprecation error
+		\item Erweiterungen, die eine Instanz der StandaloneView erzeugen,
+			sollten nicht eine Instanz des ContentObjectRenderer als Konstruktor
+			Argument übergeben
+		\item Andernfalls generiert TYPO3 einen Deprecation-Fehler
 	\end{itemize}
 
 \end{frame}
