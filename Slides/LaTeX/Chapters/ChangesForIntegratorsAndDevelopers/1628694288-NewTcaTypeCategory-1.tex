@@ -8,22 +8,22 @@
 % Feature | 94622 | New TCA type "category"
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{New TCA Type: \texttt{category} (1)}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Neuer TCA-Typ: \texttt{Kategorie} (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item A new TCA field type "\texttt{category}" has been added to the TYPO3 Core
-		\item This supersedes the \texttt{CategoryRegistry} and the method\newline
+		\item Ein neuer TCA-Feldtyp "\texttt{category}" wurde zum TYPO3 Core hinzugefügt
+		\item Dies ersetzt die \texttt{CategoryRegistry} und die Methode\newline
 			\small
 				\texttt{ExtensionManagementUtility->makeCategorizable()}\newline
-				(which we will mark as deprecated in the future)
+				(die wir in Zukunft als veraltet kennzeichnen werden)
 			\normalsize
-		\item TYPO3 automatically generates the TCA configuration and also adds
-			the database field
-		\item Usage example:
+		\item TYPO3 generiert automatisch die TCA-Konfiguration und fügt auch das
+			Datenbankfeld hinzu
+		\item Beispiel für die Verwendung:
 \begin{lstlisting}
 $GLOBALS['TCA'][$myTable]['columns']['categories'] = [
   'config' => [
