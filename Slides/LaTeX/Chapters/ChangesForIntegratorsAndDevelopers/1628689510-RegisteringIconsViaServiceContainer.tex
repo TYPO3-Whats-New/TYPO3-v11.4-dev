@@ -8,16 +8,16 @@
 % Feature | 94692 | Registering Icons via Service Container
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Custom Icon Registration}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Benutzerdefinierte Icon-Registrierung}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Extension developers can now register custom icons through a Service Container
-		\item The new approach improves the performance of requests
-		\item Store the configuration in file \texttt{Configuration/Icons.php}:
+		\item Entwickler von Erweiterungen können jetzt benutzerdefinierte Symbole über einen Service-Container registrieren
+		\item Der neue Ansatz verbessert die Leistung von Anfragen
+		\item Speichern Sie die Konfiguration in der Datei \texttt{Configuration/Icons.php}:
 \begin{lstlisting}
 <?php
 return [
