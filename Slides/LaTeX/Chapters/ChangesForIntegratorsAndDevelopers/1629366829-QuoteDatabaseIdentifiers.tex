@@ -8,21 +8,21 @@
 % Important | 94697 | Quote database identifiers when used instead of globally upfront
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
+	\frametitle{Änderungen für Integratoren und Entwickler}
 	\framesubtitle{Database Identifier Quotation}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item TCA keys that contain SQL fragments use a new quoting mechanism
-			when the TYPO3 Core builds the database queries\newline
-			\small(fields such as \texttt{foreign\_table\_where}, \texttt{MM\_table\_where}, etc.)\normalsize
-		\item This is important to ensure DBAL compatibility and makes a
-			database connection unnecessary during TCA cache warmup
-		\item A feature flag "\texttt{runtimeDbQuotingOfTcaConfiguration}" lets
-		 	integrators/developers force the old behaviour if required
-		\item This flag will be removed in TYPO3 v12.0
+		\item TCA-Schlüssel, die SQL-Fragmente enthalten, verwenden einen neuen Quotierungsmechanismus
+			wenn der TYPO3 Core die Datenbankabfragen erstellt\newline
+			\small(Felder wie \texttt{foreign\_table\_where}, \texttt{MM\_table\_where}, usw.)\normalsize
+		\item Dies ist wichtig, um die DBAL-Kompatibilität zu gewährleisten und eine Datenbankverbindung
+			während des TCA Cache Warmup unnötig zu machen
+		\item Ein Feature-Flag "\texttt{runtimeDbQuotingOfTcaConfiguration}" ermöglicht
+		 	Integratoren/Entwickler bei Bedarf das alte Verhalten erzwingen
+		\item Dieses Flag wird in TYPO3 v12.0 entfernt werden
 	\end{itemize}
 
 \end{frame}
