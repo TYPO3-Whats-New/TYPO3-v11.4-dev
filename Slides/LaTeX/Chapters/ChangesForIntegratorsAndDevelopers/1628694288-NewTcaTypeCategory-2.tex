@@ -8,14 +8,14 @@
 % Feature | 94622 | New TCA type "category"
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{New TCA Type: \texttt{category} (2)}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Neuer TCA-Typ: \texttt{Kategorie} (2)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Developers can define relations, for example:
+		\item Entwickler können Beziehungen definieren, z.B.:
 \begin{lstlisting}
 $GLOBALS['TCA'][$myTable]['columns']['mainCategory'] = [
   'config' => [
@@ -25,14 +25,14 @@ $GLOBALS['TCA'][$myTable]['columns']['mainCategory'] = [
 ];
 \end{lstlisting}
 
-		\item Possible values are:
+		\item Mögliche Werte sind:
 			\begin{itemize}
-				\item \texttt{manyToMany} (default)
+				\item \texttt{manyToMany} (Standard)
 				\item \texttt{oneToMany}
 				\item \texttt{oneToOne}
 			\end{itemize}
 
-		\item See \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94622-NewTCATypeCategory.html}{changelog} for further details
+		\item Siehe \href{https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/11.4/Feature-94622-NewTCATypeCategory.html}{Changelog} für weitere Details
 
 	\end{itemize}
 
