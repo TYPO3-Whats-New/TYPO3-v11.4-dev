@@ -8,20 +8,20 @@
 % Feature | 94577 | Clear indexed_search documents when content is changed
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Indexed Search}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Indizierte Suche}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{8}{10}\ttfamily}
 
 	\begin{itemize}
-		\item The system extension \texttt{EXT:indexed\_search} now features
-			a new configuration option:
+		\item Die Systemerweiterung \texttt{EXT:indexed\_search} verfügt nun über
+			eine neue Konfigurationsoption:
 			\small"\texttt{basic.deleteFromIndexAfterEditing}"\normalsize
-		\item If enabled (which is the default) and a page or its content is
-			updated, the page and its content are removed from the search index
-		\item If this option is disabled, backend users have to manually clear
-			the index as required
+		\item Wenn diese Funktion aktiviert ist (was die Standardeinstellung ist) und eine Seite
+			oder ihr Inhalt aktualisiert wird, werden die Seite und ihr Inhalt aus dem Suchindex entfernt
+		\item Wenn diese Option deaktiviert ist, müssen Backend-Benutzer den
+			Index nach Bedarf manuell löschen
 	\end{itemize}
 
 \end{frame}
