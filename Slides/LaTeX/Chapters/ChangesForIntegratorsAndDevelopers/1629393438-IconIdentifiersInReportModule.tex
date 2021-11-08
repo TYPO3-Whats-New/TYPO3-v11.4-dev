@@ -8,16 +8,16 @@
 % Feature | 94590 | Allow icon identifiers in report module registration
 
 \begin{frame}[fragile]
-	\frametitle{Changes for Integrators and Developers}
-	\framesubtitle{Icons in Reports Module}
+	\frametitle{Änderungen für Integratoren und Entwickler}
+	\framesubtitle{Icons im Modul Berichte}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{6}{8}\ttfamily}
 
 	\begin{itemize}
-		\item Developers can now provide icon identifiers in the registration
-			array of the Reports backend module
-		\item For example:
+		\item Entwickler können jetzt Icon-Identifikatoren im Registrierungs-
+			Array des Backend-Moduls Reports bereitstellen
+		\item Zum Beispiel:
 \begin{lstlisting}
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['reports']['tx_reports']['status'] = [
   'title' =>
