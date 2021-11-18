@@ -8,18 +8,18 @@
 % Feature | 84115 | Doctrine DBAL - notInSet() for expressions
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
-	\framesubtitle{Doctrine DBAL: New Method \texttt{notInSet()}}
+	\frametitle{Sonstiges}
+	\framesubtitle{Doctrine DBAL: Neue Methode \texttt{notInSet()}}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{7}{9}\ttfamily}
 
 	\begin{itemize}
-		\item TYPO3's DBAL ExpressionBuilder now also supports the method \texttt{notInSet()}
-		\item This works with all officially supported DB engines such as SQLite,
-			MySQL/MariaDB, PostgreSQL, and MSSQL
-		\item The following example queries all frontend users who do not directly
-			belong to the usergroup ID 5:
+		\item Der DBAL ExpressionBuilder von TYPO3 unterstützt nun auch die Methode \texttt{notInSet()}
+		\item Dies funktioniert mit allen offiziell unterstützten DB-Engines wie SQLite,
+			MySQL/MariaDB, PostgreSQL und MSSQL
+		\item Das folgende Beispiel fragt alle Frontend-Benutzer ab, die nicht direkt
+			der Benutzergruppe ID 5 angehören:
 \begin{lstlisting}
 $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
   ->getQueryBuilderForTable('fe_users');
