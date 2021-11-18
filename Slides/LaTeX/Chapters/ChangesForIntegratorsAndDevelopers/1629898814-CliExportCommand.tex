@@ -8,23 +8,23 @@
 % Feature | 84718 | Add CLI export command to EXT:impexp
 
 \begin{frame}[fragile]
-	\frametitle{Miscellaneous}
+	\frametitle{Sonstiges}
 	\framesubtitle{TYPO3 CLI (1)}
 
 	% decrease font size for code listing
 	\lstset{basicstyle=\fontsize{9}{11}\ttfamily}
 
 	\begin{itemize}
-		\item New command added to TYPO3's command line interface (CLI):
+		\item Ein neuer Befehl wurde der TYPO3-Befehlszeilenschnittstelle (CLI) hinzugefügt:
 \begin{lstlisting}
 ./bin/typo3 impexp:export [options] [--] [<filename>]
 \end{lstlisting}
-		\item The "export" completes the existing "import" functionality
-		\item The command exports the entire TYPO3 page tree or parts of it
-		\item Integrators and administrators can influence the export through
-			a wide range of options (e.g. file type, page tree depth, etc.)
-		\item Exports can be re-imported into other TYPO3 instances or
-			used as initial page trees in a distribution
+		\item Der "Export" ergänzt die bestehende "Import"-Funktionalität
+		\item Der Befehl exportiert den gesamten TYPO3-Seitenbaum oder Teile davon
+		\item Integratoren und Administratoren können den Export durch eine Vielzahl von
+			Optionen beeinflussen (z.B. Typ der Seite, Tiefe des Seitenbaums, usw.)
+		\item Exporte können in andere TYPO3-Instanzen reimportiert werden oder als
+			Ausgangsseitenbäume in einer Distribution
 	\end{itemize}
 
 \end{frame}
